@@ -121,18 +121,18 @@ function setSearchResult(keywords, category) {
                     tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
                 }
                 found = tmp.indexOf(keyword) != -1;
-
+                
                 // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
-                if (found != not_keyword) all_valid = false;
+                if (found == not_keyword) all_valid = false;
             }
-            // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array. 
-            if (!all_valid) {
-                if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
-                // break keywords loop and move on to next recipe
-                break;
-            } else {
-                if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
-            }
+            // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array.    
+        }
+        if (!all_valid) {
+            if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
+            // break keywords loop and move on to next recipe
+            break;
+        } else {
+            if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
         }
     }
     // Hold the result container DOM
