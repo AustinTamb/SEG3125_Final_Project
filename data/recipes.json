@@ -1,0 +1,16 @@
+[
+    {
+        "id": 0,
+        "name":"test and",
+        "ingredients":[ 
+            {"name":"Apples", "amount": "2"}, 
+            {"name":"Oranges", "amount": "3"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Preheat over to 350 degrees.", "time":"-1"},
+            {"type": "timer", "instruction":"Let cook for 1 minutes.", "time":"1"}
+        ],
+        "image":"data/img/food.jpg"
+    }
+]

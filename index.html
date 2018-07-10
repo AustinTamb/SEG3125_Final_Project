@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>viewRecipe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script src="data/recipes.json"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <h2 class="text-center"> Welcome to viewRecipe!</h2>
+        <h5 class="text-center"> The website that keeps track of time as you watch a movie!</h5>
+        <br>
+    </div>
+    <nav class="navbar navbar-custom navbar-expand-sm sticky-top shadow">
+        <ul class="navbar-nav te">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span class="fa fa-home"></span> Home
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container search_container">
+        <br>
+        <h3 class="text-center">Search for a recipe</h3>
+        <p class="text-center">To get started, find a recipe by entering a keyword as well as the category of the keyword. The result will then
+            be displayed.</p>
+        <div class="container" id="search">
+            <div class="d-flex">
+                <div class="col-8">
+                    <div class="form-group">
+                        <input placeholder="Search for a recipe.." type="text" class="form-control" spellcheck id="search_recipe">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <select class="form-control" id="search_category">
+                            <option>Any</option>
+                            <option>Name</option>
+                            <option>Ingredients</option>
+                            <option>Duration</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-outline-dark" id="btn_search"><span class="fa fa-search"></span></button>
+                </div>
+            </div>
+            <div class="alert alert-info alert-dismissible shadow-sm">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Info!</strong> You can search for multiple keywords by seperating them by ','. You can also search for without
+                that keyword by adding a '!' infront of the keyword.
+            </div>
+            <div class="row-fluid" id="search_result_container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="d-flex">
+                            <th class="col-9">Name</th>
+                            <th class="col-3">Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody id="search_results">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeInfo" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="recipeInfoName">Recipe Name</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="col-4">
+                            <img src="" id="recipeInfoImg">
+                        </div>
+                        <div class="col-8" id="recipeInfoIng">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-12" id="recipeInfoDur">
+                            Estimated duration
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: left;">Close</button>
+                    <button id="btn_startCooking" type="button" class="btn btn-success" data-dismiss="modal" style="float: right;" ;>Start Cooking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
