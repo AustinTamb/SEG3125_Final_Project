@@ -44,7 +44,7 @@ function displayInfo(id) {
     var ingredients = recipes[id].ingredients;
     var tmp = "";
     for (i in ingredients) {
-        tmp += '<li>{amount} {item}</li>'.replace("{item}", ingredients[i].name).replace("{amount}", ingredients[i].amount);
+        tmp += '<li>{amount} {item}</li>'.replace("{item}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
     }
     document.getElementById("recipeInfoIng").innerHTML = '<h4>Ingredients:</h4><ul>' + tmp + '</ul>';
     document.getElementById("recipeInfoDur").innerHTML = "Estimated duration: " + recipes[id].duration + " minutes";
@@ -195,7 +195,7 @@ function generateRecipePage() {
         var ingredients = recipes[id].ingredients;
         tmp = "<ul>";
         for (i in ingredients) {
-            tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{amount} {ingredient}</label></li>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", ingredients[i].amount);
+            tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{amount} {ingredient}</label></li>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
         }
         ing.innerHTML = tmp + "</ul>";
     });
@@ -236,4 +236,17 @@ function waitStep(time) {
 function stopWait(time) {
     // Best way to have a sleep in JS
     return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function replaceFractions(to_parse){
+    var fractions = {"1/2":"½", "1/3":"⅓", "2/3":"⅔", "1/4":"¼", 
+                     "3/4":"¾", "1/5":"⅕", "2/5":"⅖", "3/5":"⅗",
+                     "4/5":"⅘", "1/6":"⅙", "5/6":"⅚", "1/7":"⅐",
+                     "1/8":"⅛", "3/8":"⅜", "5/8":"⅝", "7/8":"⅞",
+                     "1/9":"⅑", "1/10":"⅒"
+                    };
+    for (i in fractions){
+        while (to_parse.indexOf(i) != -1) to_parse = to_parse.replace(i, fractions[i]);
+    }
+    return to_parse;
 }
