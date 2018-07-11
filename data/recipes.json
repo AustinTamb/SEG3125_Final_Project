@@ -9,8 +9,129 @@
         "duration":"10",
         "steps": [
             {"type": "normal", "instruction":"Preheat over to 350 degrees.", "time":"-1"},
-            {"type": "timer", "instruction":"Let cook for 5 minutes.", "time":"5"}
+            {"type": "timer", "instruction":"Let cook for 5 minutes.", "time":"1"}
         ],
         "image":"data/img/food.jpg"
+    },
+
+    {
+        "id": 1,
+        "name":"Cut apples",
+        "ingredients":[ 
+            {"name":"apple", "amount": "1"} 
+        ],
+        "duration":"5",
+        "steps": [
+            {"type": "normal", "instruction":"Get an apple and slice both opposite side off.", "time":"-1"},
+            {"type": "normal", "instruction":"Slice each side cut off into 3 pieces.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut the remaining 2 sides off of the apple.", "time":"-1"}
+        ],
+        "image":"data/img/food.jpg"
+
+    },
+
+    {
+        "id": 2,
+        "name":"Orange slices",
+        "ingredients":[ 
+            {"name":"orange", "amount": "1"}
+        ],
+        "duration":"5",
+        "steps": [
+            {"type": "normal", "instruction":"Get an orange and slice in half.", "time":"-1"},
+            {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"},
+            {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"}
+        ],
+        "image":"data/img/food.jpg"
+
+    },
+
+    {
+        "id": 3,
+        "name":"Oatmeal",
+        "ingredients":[ 
+            {"name":"Oats", "amount": "2 cups"}, 
+            {"name":"Brown Sugar", "amount": "5 tablespoons"}, 
+            {"name":"Milk", "amount": "1/4 cup"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Fill a bowl with the oats.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix milk with the oats in a bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Preheat stove to medium heat.", "time":"-1"},
+            {"type": "normal", "instruction":"Fill pan with the the contents of the bowl.", "time":"-1"},
+            {"type": "timer", "instruction":"Cook on the stove for 3 minutes.", "time":"3"},
+            {"type": "normal", "instruction":"Remove from heat and add down sugar in you like to.", "time":"-1"}
+        ],
+        "image":"data/img/food.jpg"
+
+    },
+
+    {
+        "id": 4,
+        "name":"Cereal",
+        "ingredients":[ 
+            {"name":"Cereal", "amount": "2 cups"}, 
+            {"name":"Milk", "amount": "1/2 cup"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
+            {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
+        ],
+        "image":"data/img/food.jpg"
+
+    },
+
+    {
+        "id": 5,
+        "name":"Pizza",
+        "ingredients":[ 
+            {"name":"Dough", "amount": "1 lbs"}, 
+            {"name":"Cheese", "amount": "1/2 cup"},
+            {"name":"Olive oil", "amount": "3 teaspoons"},
+            {"name":"Garlic", "amount": "2 cloves"},
+            {"name":"Butter", "amount": "1/8 cup"}, 
+            {"name":"Oregano", "amount": "2 teaspoons"},
+            {"name":"Thyme", "amount": "1 teaspoon"},
+            {"name":"Tomato sauce", "amount": "1/4 cup"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Preheat oven to 350 F.", "time":"-1"},
+            {"type": "normal", "instruction":"Roll out dough into a circle with excess dough around the edges.", "time":"-1"},
+            {"type": "normal", "instruction":"Peel and mince garlic.", "time":"-1"},
+            {"type": "normal", "instruction":"Melt butter and mix with garlic, thyme and 1 teaspoon of oregano.", "time":"-1"},
+            {"type": "normal", "instruction":"Spread tomato sauce on the center portion of the dough in an even layer", "time":"-1"},
+            {"type": "normal", "instruction":"Spread cheese on the tomato sauce.", "time":"-1"},
+            {"type": "normal", "instruction":"Add leftover oregano over the cheese.", "time":"-1"},
+            {"type": "normal", "instruction":"Drizzle olive oil through out the covered portion.", "time":"-1"},
+            {"type": "normal", "instruction":"Brush butter mix over the edges of the dough", "time":"-1"},
+            {"type": "timer", "instruction":"Place in the oven for 25 minutes.", "time":"25"},
+            {"type": "normal", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
+
+        ],
+        "image":"data/img/food.jpg"
+
+    },
+
+    {
+        "id": 6,
+        "name":"Roast duck",
+        "ingredients":[ 
+            {"name":"Duck", "amount": "Whole"}, 
+            {"name":"5 spice seasoning", "amount": "8 tablespoons"},
+            {"name":"Salt", "amount": "2 teaspoons"},
+            {"name":"Water", "amount": "2 tablespoons"},
+            {"name":"", "amount": "2 tablespoons"},
+            {"name":"Soy Sauce", "amount": "8 tablespoons"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
+            {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
+        ],
+        "image":"data/img/food.jpg"
+
     }
 ]
