@@ -4,11 +4,11 @@
         "name":"Roast duck",
         "ingredients":[ 
             {"name":"Duck", "amount": "Whole"}, 
-            {"name":"5 spice seasoning", "amount": "8 tablespoons"},
-            {"name":"Salt", "amount": "2 teaspoons"},
-            {"name":"Water", "amount": "2 tablespoons"},
-            {"name":"", "amount": "2 tablespoons"},
-            {"name":"Soy Sauce", "amount": "8 tablespoons"}
+            {"name":"5 spice seasoning", "amount": "8 tbls"},
+            {"name":"Salt", "amount": "2 tbs"},
+            {"name":"Water", "amount": "2 tbls"},
+            {"name":"", "amount": "2 tbls"},
+            {"name":"Soy Sauce", "amount": "8 tbls"}
         ],
         "duration":"10",
         "steps": [
@@ -54,7 +54,7 @@
         "name":"Oatmeal",
         "ingredients":[ 
             {"name":"Oats", "amount": "2 cups"}, 
-            {"name":"Brown Sugar", "amount": "5 tablespoons"}, 
+            {"name":"Brown Sugar", "amount": "5 tbls"}, 
             {"name":"Milk", "amount": "1/4 cup"}
         ],
         "duration":"10",
@@ -92,10 +92,10 @@
         "ingredients":[ 
             {"name":"Dough", "amount": "1 lbs"}, 
             {"name":"Cheese", "amount": "1/2 cup"},
-            {"name":"Olive oil", "amount": "3 teaspoons"},
+            {"name":"Olive oil", "amount": "3 tbs"},
             {"name":"Garlic", "amount": "2 cloves"},
             {"name":"Butter", "amount": "1/8 cup"}, 
-            {"name":"Oregano", "amount": "2 teaspoons"},
+            {"name":"Oregano", "amount": "2 tbs"},
             {"name":"Thyme", "amount": "1 teaspoon"},
             {"name":"Tomato sauce", "amount": "1/4 cup"}
         ],

@@ -4,7 +4,7 @@ var recipes = [];
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
     // This pulls data to populate website with recipes
-    $.getJSON("https://api.myjson.com/bins/edgpy", function (data) {
+    $.getJSON("https://api.myjson.com/bins/14kjc6", function (data) {
         var tmp = [];
         $.each(data, function (k, v) {
             tmp.push(v);
@@ -171,7 +171,7 @@ function startCooking(recipeId) {
 
 function generateRecipePage() {
     // pretty much just puts fills the recipe.html page with the recipe data.
-    $.getJSON("https://api.myjson.com/bins/edgpy", function (data) {
+    $.getJSON("https://api.myjson.com/bins/14kjc6", function (data) {
         var tmp = [];
         $.each(data, function (k, v) {
             tmp.push(v);
