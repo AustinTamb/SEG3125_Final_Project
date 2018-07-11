@@ -7,7 +7,7 @@
             {"name":"5 spice seasoning", "amount": "8 tbls"},
             {"name":"Salt", "amount": "2 tbs"},
             {"name":"Water", "amount": "2 tbls"},
-            {"name":"", "amount": "2 tbls"},
+            {"name":"Garlic", "amount": "2 tbls"},
             {"name":"Soy Sauce", "amount": "8 tbls"}
         ],
         "duration":"10",
@@ -30,7 +30,6 @@
             {"type": "normal", "instruction":"Cut the remaining 2 sides off of the apple.", "time":"-1"}
         ],
         "image":"data/img/food.jpg"
-
     },
     {
         "id": 2,
@@ -54,7 +53,7 @@
             {"name":"Brown Sugar", "amount": "5 tbls"}, 
             {"name":"Milk", "amount": "1/4 cup"}
         ],
-        "duration":"10",
+        "duration":"3",
         "steps": [
             {"type": "normal", "instruction":"Fill a bowl with the oats.", "time":"-1"},
             {"type": "normal", "instruction":"Mix milk with the oats in a bowl.", "time":"-1"},
@@ -73,7 +72,7 @@
             {"name":"Cereal", "amount": "2 cups"}, 
             {"name":"Milk", "amount": "1/2 cup"}
         ],
-        "duration":"10",
+        "duration":"2",
         "steps": [
             {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
             {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
@@ -94,7 +93,7 @@
             {"name":"Thyme", "amount": "1 teaspoon"},
             {"name":"Tomato sauce", "amount": "1/4 cup"}
         ],
-        "duration":"10",
+        "duration":"30-40",
         "steps": [
             {"type": "normal", "instruction":"Preheat oven to 350 F.", "time":"-1"},
             {"type": "normal", "instruction":"Roll out dough into a circle with excess dough around the edges.", "time":"-1"},
@@ -106,7 +105,7 @@
             {"type": "normal", "instruction":"Drizzle olive oil through out the covered portion.", "time":"-1"},
             {"type": "normal", "instruction":"Brush butter mix over the edges of the dough", "time":"-1"},
             {"type": "timer", "instruction":"Place in the oven for 25 minutes.", "time":"25"},
-            {"type": "normal", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
+            {"type": "timer", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
 
         ],
         "image":"data/img/food.jpg"

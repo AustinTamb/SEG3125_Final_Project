@@ -1,6 +1,6 @@
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "http://myjson.com/14kjc6";
+var JSON_URL = "https://api.myjson.com/bins/rlacm";
 
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
@@ -131,7 +131,6 @@ function setSearchResult(keywords, category) {
         if (!all_valid) {
             if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
             // break keywords loop and move on to next recipe
-            break;
         } else {
             if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
         }
