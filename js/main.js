@@ -1,10 +1,11 @@
 // Holds recipes pulled from the jquery
 var recipes = [];
+var JSON_URL = "http://myjson.com/14kjc6";
 
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
     // This pulls data to populate website with recipes
-    $.getJSON("https://api.myjson.com/bins/14kjc6", function (data) {
+    $.getJSON(JSON_URL, function (data) {
         var tmp = [];
         $.each(data, function (k, v) {
             tmp.push(v);
@@ -171,7 +172,7 @@ function startCooking(recipeId) {
 
 function generateRecipePage() {
     // pretty much just puts fills the recipe.html page with the recipe data.
-    $.getJSON("https://api.myjson.com/bins/14kjc6", function (data) {
+    $.getJSON(JSON_URL, function (data) {
         var tmp = [];
         $.each(data, function (k, v) {
             tmp.push(v);
