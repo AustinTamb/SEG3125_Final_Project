@@ -1,19 +1,22 @@
 [
     {
         "id": 0,
-        "name":"test and",
+        "name":"Roast duck",
         "ingredients":[ 
-            {"name":"apple", "amount": "2"}, 
-            {"name":"orange", "amount": "3"}
+            {"name":"Duck", "amount": "Whole"}, 
+            {"name":"5 spice seasoning", "amount": "8 tablespoons"},
+            {"name":"Salt", "amount": "2 teaspoons"},
+            {"name":"Water", "amount": "2 tablespoons"},
+            {"name":"", "amount": "2 tablespoons"},
+            {"name":"Soy Sauce", "amount": "8 tablespoons"}
         ],
         "duration":"10",
         "steps": [
-            {"type": "normal", "instruction":"Preheat over to 350 degrees.", "time":"-1"},
-            {"type": "timer", "instruction":"Let cook for 5 minutes.", "time":"1"}
+            {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
+            {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
         ],
         "image":"data/img/food.jpg"
     },
-
     {
         "id": 1,
         "name":"Cut apples",
@@ -110,26 +113,6 @@
             {"type": "timer", "instruction":"Place in the oven for 25 minutes.", "time":"25"},
             {"type": "normal", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
 
-        ],
-        "image":"data/img/food.jpg"
-
-    },
-
-    {
-        "id": 6,
-        "name":"Roast duck",
-        "ingredients":[ 
-            {"name":"Duck", "amount": "Whole"}, 
-            {"name":"5 spice seasoning", "amount": "8 tablespoons"},
-            {"name":"Salt", "amount": "2 teaspoons"},
-            {"name":"Water", "amount": "2 tablespoons"},
-            {"name":"", "amount": "2 tablespoons"},
-            {"name":"Soy Sauce", "amount": "8 tablespoons"}
-        ],
-        "duration":"10",
-        "steps": [
-            {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
-            {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
         ],
         "image":"data/img/food.jpg"
 
