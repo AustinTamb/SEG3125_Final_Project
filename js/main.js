@@ -112,7 +112,7 @@ function setSearchResult(keywords, category) {
             } else {
                 // If category is any, just add all relevant information into a single string
                 if (category == "any") {
-                    tmp = recipes[j].name + recipes[j].duration;
+                    tmp = recipes[j].name + recipes[j].duration + "minutes";
                     for (k in recipes[j].ingredients) {
                         tmp += recipes[j].ingredients[k].name;
                     }
@@ -122,7 +122,7 @@ function setSearchResult(keywords, category) {
                     tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
                 }
                 found = tmp.indexOf(keyword) != -1;
-                
+
                 // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
                 if (found == not_keyword) all_valid = false;
             }
@@ -238,14 +238,15 @@ function stopWait(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function replaceFractions(to_parse){
-    var fractions = {"1/2":"½", "1/3":"⅓", "2/3":"⅔", "1/4":"¼", 
-                     "3/4":"¾", "1/5":"⅕", "2/5":"⅖", "3/5":"⅗",
-                     "4/5":"⅘", "1/6":"⅙", "5/6":"⅚", "1/7":"⅐",
-                     "1/8":"⅛", "3/8":"⅜", "5/8":"⅝", "7/8":"⅞",
-                     "1/9":"⅑", "1/10":"⅒"
-                    };
-    for (i in fractions){
+function replaceFractions(to_parse) {
+    var fractions = {
+        "1/2": "½", "1/3": "⅓", "2/3": "⅔", "1/4": "¼",
+        "3/4": "¾", "1/5": "⅕", "2/5": "⅖", "3/5": "⅗",
+        "4/5": "⅘", "1/6": "⅙", "5/6": "⅚", "1/7": "⅐",
+        "1/8": "⅛", "3/8": "⅜", "5/8": "⅝", "7/8": "⅞",
+        "1/9": "⅑", "1/10": "⅒"
+    };
+    for (i in fractions) {
         while (to_parse.indexOf(i) != -1) to_parse = to_parse.replace(i, fractions[i]);
     }
     return to_parse;

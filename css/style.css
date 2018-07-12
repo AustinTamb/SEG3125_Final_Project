@@ -5,6 +5,7 @@ body {
 
 .navbar-custom {
     background-color: #A7DB62;
+    padding: 0;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -15,10 +16,19 @@ body {
 .navbar-custom .navbar-nav .nav-link {
     color: #000000;
 }
+
+.nav-link{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #474747;
+    background-color: rgb(132, 187, 60);
 }
 
 th {
