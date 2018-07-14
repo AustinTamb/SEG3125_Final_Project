@@ -1,6 +1,8 @@
 // Holds recipes pulled from the jquery
 var recipes = [];
 var JSON_URL = "https://api.myjson.com/bins/rlacm";
+var timer = [];
+var timer_interval;
 
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
@@ -18,7 +20,7 @@ $(document).ready(function () {
         searchChanged();
     });
 
-    $("#btn-login").on("click", function(){
+    $("#btn-login").on("click", function () {
         $("#loginModal").modal();
     });
 
@@ -187,7 +189,13 @@ function generateRecipePage() {
         tmp = "<ul>";
         for (i in steps) {
             if (steps[i].type == "timer") {
-                tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{instruction}</label><li><button class="btn btn-success" onclick="waitStep({time});"><i class="fa fa-play"></i> Start Timer</button></li></li>'.replace("{instruction}", steps[i].instruction).replace("{time}", steps[i].time);
+                var timer_id = timer.length;
+                timer.push({
+                    "id": timer_id,
+                    "time": steps[i].time * 60,
+                    "time_left": -1
+                });
+                tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{instruction}</label><li><button class="btn btn-success" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></li></li>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
             } else {
                 tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{instruction}</label></li>'.replace("{instruction}", steps[i].instruction);
             }
@@ -205,41 +213,36 @@ function generateRecipePage() {
     });
 }
 
-function waitStep(time) {
-    // Turn minute wait time into ms (m * 60s/min * 1000ms/s), put the video in fullscren and play the video.
-    var ms_time = parseInt(time) * 60 * 1000;
-    var video = document.getElementById("video");
+function waitStep(timer_id, button) {
+    button.disabled = true;
+    // Turn minute wait time into ms (m * 60s/min), put the video in fullscren and play the video.
+    var time_left = timer[timer_id].time_left == -1 ? timer[timer_id].time : timer[timer_id].time_left;
+    var minutes = document.getElementById("timer_minutes");
+    var seconds = document.getElementById("timer_seconds");
 
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) {
-        video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) {
-        video.msRequestFullscreen();
-    }
-    video.play();
+    minutes.innerHTML = parseInt(time_left / 60);
+    seconds.innerHTML = ("0" + (time_left % 60)).slice(-2);
 
-    stopWait(ms_time).then(() => {
-        // Once the sleep is done, exit the fullscreen, pause the video and alert the user about the cooking time being done.
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
+    $("#timerModal").modal();
+    timer_interval = setInterval(function () {
+        minutes.innerHTML = parseInt(--time_left / 60);
+        seconds.innerHTML = ("0" + (time_left % 60)).slice(-2);
+        if (time_left == 0) {
+            clearInterval(timer_interval);
+            alert("The timer has completed.");
+            $("#timerModal").modal();
+            timer[timer_id].time_left = -1;
+            button.disabled = false;
         }
-        document.getElementById("video").pause();
-        alert("The cooking time is done. The video has been paused for you.");
+    }, 1000);
+    $("#timer_close").off("click");
+    $("#timer_close").on("click", function () {
+        clearInterval(timer_interval);
+        var keep_time = confirm("You have closed the timer, would you like to continue from this time when restarting the timer?");
+        if (keep_time && time_left != 0) timer[timer_id].time_left = time_left;
+        else timer[timer_id].time_left = -1;
+        button.disabled = false;
     });
-}
-
-function stopWait(time) {
-    // Best way to have a sleep in JS
-    return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 function replaceFractions(to_parse) {
@@ -255,50 +258,3 @@ function replaceFractions(to_parse) {
     }
     return to_parse;
 }
-
-
-
-function login(usr){
-    // TODO: Get user id to be stored in cookie (Making getting from database easier)
-    // TODO: 
-    setCookie("userid", usr, 30);
-
-}
-
-/*
-Code below comes from : https://www.w3schools.com/js/js_cookies.asp
-*/
-
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-} 

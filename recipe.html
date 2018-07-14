@@ -59,15 +59,37 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="row-fluid" id="video_container">
-                    <video style="max-width: 100%; height:auto; float:right;" controls=1 id="video" poster="data/img/incredibles.jpg" src="data/video/TheIncredibles2.mp4">
-                    </video>
+        </div>
+    </div>
+    <br>
+    <div class="modal fade" id="timerModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Timer</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="row">
+                            <div class="col-5">
+                                <p id="timer_minutes">MIN</p>
+                            </div>
+                            <div class="col2">
+                                <p>:</p>
+                            </div>
+                            <div class="col-5">
+                                <p id="timer_seconds">SEC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="timer_close">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <br>
 </body>
 <footer>
 </footer>
