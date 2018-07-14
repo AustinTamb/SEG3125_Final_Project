@@ -1,3 +1,4 @@
+"use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
 var JSON_URL = "https://api.myjson.com/bins/rlacm";
@@ -18,10 +19,6 @@ $(document).ready(function () {
     //Pretty much every time the user enters a new keyvalue
     $("#search_recipe").on("keyup", function () {
         searchChanged();
-    });
-
-    $("#btn-login").on("click", function () {
-        $("#loginModal").modal();
     });
 
     // When the user changes the keyword category
@@ -49,6 +46,7 @@ function displayInfo(id) {
     document.getElementById("recipeInfoImg").src = recipes[id].image;
     var ingredients = recipes[id].ingredients;
     var tmp = "";
+    var i;
     for (i in ingredients) {
         tmp += '<li>{amount} {item}</li>'.replace("{item}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
     }
@@ -78,8 +76,11 @@ function setSearchResult(keywords, category) {
     var test;
     // temp variable to make working with sub-arrays easier
     var ingredients;
+    // temp variable to hold if the current keyword is a not_keyword
+    var not_keyword;
 
     // Looping through recipes first since you only want to check all of those values once
+    var i, j, k;
     for (j in recipes) {
         // Assume that all the keywords are valid from the start.
         all_valid = true;
@@ -87,6 +88,7 @@ function setSearchResult(keywords, category) {
             keyword = keywords[i];
             // get all the consecutive '!' at the start of the keyword
             test = reg.exec(keyword);
+            tmp = "";
 
             // if test is not null, we know there's at least 1 '!', making it a possible not keyword.
             if (test != null) {
@@ -107,40 +109,35 @@ function setSearchResult(keywords, category) {
             if (category == "ingredients") {
                 // Since ingredients are stored in an array of objects, we need to go through all of them
                 ingredients = recipes[j][category];
-
                 // We only search for the name, and if the name is found or shouldn't be there
+                
                 for (k in ingredients) {
-                    tmp = ingredients[k].name.toLowerCase();
-                    found = tmp.indexOf(keyword) != -1;
-                    all_valid = !(not_keyword && found);
-                    if (found || !all_valid) break;
+                    tmp += ingredients[k].name.toLowerCase().replace(/\s+/g, '');
                 }
+            } else if (category == "any") {
+                tmp = recipes[j].name + recipes[j].duration + "minutes";
+                for (k in recipes[j].ingredients) {
+                    tmp += recipes[j].ingredients[k].name;
+                }
+                tmp = tmp.toLowerCase().replace(/\s+/g, '');
             } else {
-                // If category is any, just add all relevant information into a single string
-                if (category == "any") {
-                    tmp = recipes[j].name + recipes[j].duration + "minutes";
-                    for (k in recipes[j].ingredients) {
-                        tmp += recipes[j].ingredients[k].name;
-                    }
-                    tmp = tmp.toLowerCase().replace(/\s+/g, '');
-                } else {
-                    // Otherwise just get the value from directly accessing it by its key name
-                    tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
-                }
-                found = tmp.indexOf(keyword) != -1;
-
-                // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
-                if (found == not_keyword) all_valid = false;
+                // Otherwise just get the value from directly accessing it by its key name
+                tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
             }
+            found = tmp.indexOf(keyword) != -1;
+            // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
+            if (found == not_keyword) all_valid = false;
+            
             // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array.    
-        }
-        if (!all_valid) {
-            if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
-            // break keywords loop and move on to next recipe
-        } else {
-            if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
+            if (!all_valid) {
+                if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
+                // break keywords loop and move on to next recipe
+            } else {
+                if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
+            }
         }
     }
+
     // Hold the result container DOM
     var result_container = document.getElementById("search_result_container");
     if (document.getElementById("search_recipe").value == "") {
@@ -187,6 +184,7 @@ function generateRecipePage() {
         var inst = document.getElementById("instructions_container");
         var steps = recipes[id].steps;
         tmp = "<ul>";
+        var i;
         for (i in steps) {
             if (steps[i].type == "timer") {
                 var timer_id = timer.length;
@@ -214,8 +212,10 @@ function generateRecipePage() {
 }
 
 function waitStep(timer_id, button) {
+    // This just updates the timer modal and makes the timer functional
+    // Disable the button so multiple timers aren't started
     button.disabled = true;
-    // Turn minute wait time into ms (m * 60s/min), put the video in fullscren and play the video.
+    // Turn minute wait time into s (m * 60s/min). Select between previously saved time if it's != -1, otherwise use default
     var time_left = timer[timer_id].time_left == -1 ? timer[timer_id].time : timer[timer_id].time_left;
     var minutes = document.getElementById("timer_minutes");
     var seconds = document.getElementById("timer_seconds");
@@ -224,28 +224,44 @@ function waitStep(timer_id, button) {
     seconds.innerHTML = ("0" + (time_left % 60)).slice(-2);
 
     $("#timerModal").modal();
+    // Set interval between running the steps inside the function
     timer_interval = setInterval(function () {
+        // Sets minutes
         minutes.innerHTML = parseInt(--time_left / 60);
+        // Sets seconds
         seconds.innerHTML = ("0" + (time_left % 60)).slice(-2);
+        // If the timer is done
         if (time_left == 0) {
+            // Stop the interval
             clearInterval(timer_interval);
+            // Inform the user the timer has completed
             alert("The timer has completed.");
+            // Close the modal
             $("#timerModal").modal();
+            // Reset the time left to -1 (So it if a previously saved time remains it is not used next time)
             timer[timer_id].time_left = -1;
+            // Enable the timer button
             button.disabled = false;
         }
     }, 1000);
-    $("#timer_close").off("click");
-    $("#timer_close").on("click", function () {
+    // Remove all event listeners on the close and exit buttons
+    $("#timer_close, #timer_exit").off("click");
+    // Add new event listener onto it
+    $("#timer_close, #timer_exit").on("click", function () {
+        // Stop timer
         clearInterval(timer_interval);
+        // Ask user if they wish to save the remaining time
         var keep_time = confirm("You have closed the timer, would you like to continue from this time when restarting the timer?");
+        // If so save it, otherwise reset time_left to -1
         if (keep_time && time_left != 0) timer[timer_id].time_left = time_left;
         else timer[timer_id].time_left = -1;
+        // Enable start timer button
         button.disabled = false;
     });
 }
 
 function replaceFractions(to_parse) {
+    // This function just replaces fractions into single characters
     var fractions = {
         "1/2": "½", "1/3": "⅓", "2/3": "⅔", "1/4": "¼",
         "3/4": "¾", "1/5": "⅕", "2/5": "⅖", "3/5": "⅗",
@@ -253,6 +269,7 @@ function replaceFractions(to_parse) {
         "1/8": "⅛", "3/8": "⅜", "5/8": "⅝", "7/8": "⅞",
         "1/9": "⅑", "1/10": "⅒"
     };
+    var i;
     for (i in fractions) {
         while (to_parse.indexOf(i) != -1) to_parse = to_parse.replace(i, fractions[i]);
     }

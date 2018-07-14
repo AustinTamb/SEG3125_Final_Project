@@ -67,20 +67,25 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Timer</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" id="timer_exit">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex">
-                        <div class="row">
-                            <div class="col-5">
-                                <p id="timer_minutes">MIN</p>
-                            </div>
-                            <div class="col2">
-                                <p>:</p>
-                            </div>
-                            <div class="col-5">
-                                <p id="timer_seconds">SEC</p>
-                            </div>
+                    <div class="row text-center">
+                        <div class="col-12 text-center">
+                            <p>The step shall be complete once the following timer reaches 0:00.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h3>
+                                <tag id="timer_minutes"></tag>:
+                                <tag id="timer_seconds"></tag>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12 text-center">
+                            <p></p>
                         </div>
                     </div>
                 </div>
