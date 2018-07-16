@@ -184,7 +184,7 @@ function generateRecipePage() {
         var id = localStorage.getItem("recipeId");
         var inst = document.getElementById("instructions_container");
         var steps = recipes[id].steps;
-        tmp = "<ul>";
+        tmp = '<div class="container">';
         var i;
         for (i in steps) {
             if (steps[i].type == "timer") {
@@ -194,21 +194,21 @@ function generateRecipePage() {
                     "time": steps[i].time * 60,
                     "time_left": -1
                 });
-                tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{instruction}</label><li><button class="btn btn-success" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></li></li>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
+                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {instruction}</label></div><div class="row"><button class="btn btn-success mx-auto" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></div>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
             } else {
-                tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{instruction}</label></li>'.replace("{instruction}", steps[i].instruction);
+                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {instruction}</label></div>'.replace("{instruction}", steps[i].instruction);
             }
 
         }
-        inst.innerHTML = tmp + "</ul>";
+        inst.innerHTML = tmp + "</div>";
 
         var ing = document.getElementById("ingredients_container");
         var ingredients = recipes[id].ingredients;
-        tmp = "<ul>";
+        tmp = '<div class="container">';
         for (i in ingredients) {
-            tmp += '<li><label class="form-check-label"><input type="checkbox" class="form-check-input" value="">{amount} {ingredient}</label></li>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
+            tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {amount} {ingredient}</label></div>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
         }
-        ing.innerHTML = tmp + "</ul>";
+        ing.innerHTML = tmp + "</div>";
     });
 }
 

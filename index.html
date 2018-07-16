@@ -22,19 +22,24 @@
         <h5 class="text-center"> The website that keeps track of time as you watch a movie!</h5>
         <br>
     </div>
-    <nav class="navbar navbar-custom navbar-expand-sm sticky-top shadow">
-        <ul class="navbar-nav te">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <span class="fa fa-home"></span> Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="help.html">
-                    Help
-                </a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
+        <div class="navbar-toggler container-fluid" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link navbar-brand" href="#">
+                <span class="fa fa-bars"></span> viewRecipe
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <span class="fa fa-home"></span> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">Help</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <div class="container search_container">
         <br>
@@ -42,22 +47,22 @@
         <p class="text-center">To get started, find a recipe by entering a keyword as well as the category of the keyword. The result will then
             be displayed.</p>
         <div class="container" id="search">
-            <div class="d-flex">
-                <div class="col-8">
+            <div class="row mx-auto">
+                <div class="col-6 p-0">
                     <div class="form-group">
                         <input placeholder="Search for a recipe.." type="text" class="form-control" spellcheck id="search_recipe">
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-4 p-0">
                     <div class="form-group">
-                        <select class="form-control" id="search_category">
+                        <select class="form-control p-0" id="search_category">
                             <option>Any</option>
                             <option>Name</option>
                             <option>Ingredients</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-1">
+                <div class="col-2 p-0">
                     <button class="btn btn-outline-dark" id="btn_search">
                         <span class="fa fa-search"></span>
                     </button>
@@ -113,7 +118,7 @@
     </div>
 </body>
 <footer>
-    
+
 </footer>
 
 </html>
