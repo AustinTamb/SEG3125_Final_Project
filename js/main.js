@@ -110,7 +110,7 @@ function setSearchResult(keywords, category) {
                 // Since ingredients are stored in an array of objects, we need to go through all of them
                 ingredients = recipes[j][category];
                 // We only search for the name, and if the name is found or shouldn't be there
-                
+
                 for (k in ingredients) {
                     tmp += ingredients[k].name.toLowerCase().replace(/\s+/g, '');
                 }
@@ -125,9 +125,10 @@ function setSearchResult(keywords, category) {
                 tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
             }
             found = tmp.indexOf(keyword) != -1;
+            
             // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
             if (found == not_keyword) all_valid = false;
-            
+
             // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array.    
             if (!all_valid) {
                 if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
