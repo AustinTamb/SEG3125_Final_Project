@@ -1,7 +1,7 @@
 "use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "https://api.myjson.com/bins/rlacm";
+var JSON_URL = "https://api.myjson.com/bins/c3qla";
 var timer = [];
 var timer_interval;
 
@@ -50,7 +50,7 @@ function displayInfo(id) {
     for (i in ingredients) {
         tmp += '<li>{amount} {item}</li>'.replace("{item}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
     }
-    document.getElementById("recipeInfoIng").innerHTML = '<h4>Ingredients:</h4><ul>' + tmp + '</ul>';
+    document.getElementById("recipeInfoIng").innerHTML = '<p>In order to cook this recipe, you will need the following ingredients:</p><ul>' + tmp + '</ul>';
     document.getElementById("recipeInfoDur").innerHTML = "Estimated duration: " + recipes[id].duration + " minutes";
     $("#recipeInfo").modal();
     $("#btn_startCooking").on("click", function () {
@@ -184,9 +184,12 @@ function generateRecipePage() {
         var id = localStorage.getItem("recipeId");
         var inst = document.getElementById("instructions_container");
         var steps = recipes[id].steps;
-        tmp = '<div class="container">';
+        tmp = '<div class="form-group">';
         var i;
+        var tmp_id;
         for (i in steps) {
+            tmp_id = "instruction-" + i;
+            tmp += '<div class="checkbox"><label for="{instructionIndex}"><input name="Instruction" id="{instructionIndex}" type="checkbox" value=""> {instruction}</label>'.replace("{instructionIndex}", tmp_id).replace("{instructionIndex}", tmp_id).replace("{instruction}", steps[i].instruction);
             if (steps[i].type == "timer") {
                 var timer_id = timer.length;
                 timer.push({
@@ -194,19 +197,19 @@ function generateRecipePage() {
                     "time": steps[i].time * 60,
                     "time_left": -1
                 });
-                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {instruction}</div><div class="row"><button class="btn btn-success mx-auto" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></div>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
-            } else {
-                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {instruction}</div>'.replace("{instruction}", steps[i].instruction);
+                tmp += '<div class="row py-0"><button class="btn btn-success mx-auto" title="Click this button to start a timer for the duration of this step." onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></div>'.replace("{time}", timer_id);
             }
+            tmp += "</div>";
 
         }
         inst.innerHTML = tmp + "</div>";
 
         var ing = document.getElementById("ingredients_container");
         var ingredients = recipes[id].ingredients;
-        tmp = '<div class="container">';
+        tmp = '<div class="form-group">';
         for (i in ingredients) {
-            tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {amount} {ingredient}</div> '.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
+            tmp_id = "ingredient-" + i;
+            tmp += '<div class="checkbox"><label for="{ingredientIndex}"><input name="Ingredient" id="{ingredientIndex}" type="checkbox" value=""> {amount} {ingredient}</label></div>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount)).replace("{ingredientIndex}", tmp_id).replace("{ingredientIndex}", tmp_id);
         }
         ing.innerHTML = tmp + "</div>";
     });
