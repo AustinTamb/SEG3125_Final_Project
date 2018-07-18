@@ -194,9 +194,9 @@ function generateRecipePage() {
                     "time": steps[i].time * 60,
                     "time_left": -1
                 });
-                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {instruction}</label></div><div class="row"><button class="btn btn-success mx-auto" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></div>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
+                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {instruction}</div><div class="row"><button class="btn btn-success mx-auto" onclick="waitStep({time}, this);"><i class="fa fa-play"></i> Start Timer</button></div>'.replace("{instruction}", steps[i].instruction).replace("{time}", timer_id);
             } else {
-                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {instruction}</label></div>'.replace("{instruction}", steps[i].instruction);
+                tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {instruction}</div>'.replace("{instruction}", steps[i].instruction);
             }
 
         }
@@ -206,7 +206,7 @@ function generateRecipePage() {
         var ingredients = recipes[id].ingredients;
         tmp = '<div class="container">';
         for (i in ingredients) {
-            tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> {amount} {ingredient}</label></div>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
+            tmp += '<div class="row py-1"><label class="form-check-label"><input type="checkbox" class="form-check-input" value=""></label> {amount} {ingredient}</div> '.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount));
         }
         ing.innerHTML = tmp + "</div>";
     });
