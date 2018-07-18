@@ -60,6 +60,7 @@ th {
 
 search_container {
     background-color: #E9F1F7;
+    min-height: 100vh;
 }
 
 #recipeInfoImg {
@@ -106,4 +107,13 @@ search_container {
 
 #search_category {
     height: 100% !important;
+}
+
+#search {
+    height: 100vh !important;
+}
+
+#recipeInfoIng {
+    max-height: 50vh;
+    overflow-y: scroll;
 }
