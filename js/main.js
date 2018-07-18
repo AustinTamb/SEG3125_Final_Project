@@ -246,7 +246,7 @@ function startTimer(timer_id, button){
         // If the timer is done
         if (time_left == 0) {
             // Stop the interval
-            clearInterval(this);
+            clearInterval(timer_interval);
             // Inform the user the timer has completed
             alert("The timer has completed.");
             // Close the modal
@@ -291,7 +291,6 @@ function waitStep(timer_id, button) {
     });
 
     $("#btn-control").on("click", function(){
-        console.log(timer_interval);
         if (timer_running) {
             clearInterval(timer_interval);
             timer[timer_id].time_left = time_left;
