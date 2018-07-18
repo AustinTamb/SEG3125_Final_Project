@@ -22,12 +22,12 @@ $(document).ready(function () {
     });
 
     // When the user changes the keyword category
-    $("#search_category", "#search_recipe").on("change", function () {
+    $("#search_category, #search_recipe").on("change", function () {
         searchChanged();
     });
 
     // When the user clicks on the search button
-    $("#btn_search").on("click", function () {
+    $("#btn_search, #search_category").on("click", function () {
         searchChanged();
     });
 });

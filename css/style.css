@@ -1,9 +1,6 @@
 body {
     background-color: whitesmoke;
     color: #474747;
-}
-
-body, html {
     height: 100%;
     font-size: 1.05em;
 }
@@ -12,8 +9,8 @@ body, html {
     /* The image used */
     background-image: url("https://cdn0.vox-cdn.com/uploads/chorus_asset/file/5899681/generalmuir_eater382016_burger.0.jpg");
 
-    /* Full height */
-    height: 100%;
+    /* Full verticle height */
+    height: 100vh;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -98,6 +95,8 @@ search_container {
     }
     .form-control, .btn {
         font-size: 0.7rem;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
     }
 }
 
