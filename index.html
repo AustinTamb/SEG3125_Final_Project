@@ -16,24 +16,28 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <br>
-        <h2 class="text-center"> Welcome to viewRecipe!</h2>
-        <h5 class="text-center"> A simplistic recipe website!</h5>
-        <br>
+    <div class="container-fluid px-0 bg">
+        <div class="py-5 my-auto text-bg">
+            <h2 class="text-center"> Welcome to viewRecipe!</h2>
+            <h5 class="text-center"> A simplistic recipe website!</h5>
+        </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
         <div class="navbar-toggler container-fluid" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
-            <a class="nav-link navbar-brand" href="#">
+            <a class="nav-link navbar-brand" href="javascript:void(0);">
                 <span class="fa fa-bars"></span> viewRecipe
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span class="fa fa-home"></span> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#search">
+                        <span class="fa fa-search"></span> Search</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="help.html">Help</a>
@@ -41,21 +45,24 @@
             </ul>
         </div>
     </nav>
-    <div class="container search_container">
+    <div class="container-fluid search_container">
         <br>
         <h3 class="text-center">Search for a recipe</h3>
         <p class="text-center">To get started, find a recipe by entering a keyword as well as the category of the keyword. The result will then
-            be displayed.</p>
+            be displayed.
+            <br>You can search for multiple keywords by seperating them by ','. You can also search for without that keyword
+            by adding a '!' infront of the keyword. </p>
         <div class="container" id="search">
             <div class="row mx-auto">
                 <div class="col-6 p-0">
                     <div class="form-group">
-                        <input placeholder="Search for a recipe.." type="text" class="form-control" spellcheck id="search_recipe">
+                        <input style="height: 100%; line-height: 1.5 !important;" placeholder="Search for a recipe.." type="text" class="form-control"
+                            spellcheck id="search_recipe">
                     </div>
                 </div>
                 <div class="col-4 p-0">
                     <div class="form-group">
-                        <select class="form-control p-0" id="search_category">
+                        <select class="form-control" id="search_category">
                             <option>Any</option>
                             <option>Name</option>
                             <option>Ingredients</option>
@@ -67,11 +74,6 @@
                         <span class="fa fa-search"></span>
                     </button>
                 </div>
-            </div>
-            <div class="alert alert-info alert-dismissible shadow-sm">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Info!</strong> You can search for multiple keywords by seperating them by ','. You can also search for without
-                that keyword by adding a '!' infront of the keyword.
             </div>
             <div class="row-fluid" id="search_result_container">
                 <table class="table table-hover">
@@ -86,7 +88,8 @@
                     </tbody>
                 </table>
             </div>
-            <p id="numResults" class="text-center" style="display:none"><tag id="num_results">0</tag> recipe(s) matching the criteria have been found.</p>
+            <p id="numResults" class="text-center" style="display:none">
+                <tag id="num_results">0</tag> recipe(s) matching the criteria have been found.</p>
         </div>
     </div>
     <div class="modal fade" id="recipeInfo" role="dialog">

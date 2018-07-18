@@ -83,7 +83,7 @@ function setSearchResult(keywords, category) {
     var num_results = 0;
     // Looping through recipes first since you only want to check all of those values once
     var i, j, k;
-    
+
     for (j in recipes) {
         // Assume that all the keywords are valid from the start.
         all_valid = true;
@@ -128,13 +128,13 @@ function setSearchResult(keywords, category) {
                 tmp = recipes[j][category].toLowerCase().replace(/\s+/g, '');
             }
             found = tmp.indexOf(keyword) != -1;
-            
+
             // logic here is that you can't have something that found and not found (if found and supposed to not be found then false, don't really care about the rest)
             if (found == not_keyword) all_valid = false;
 
             // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array.    
             if (!all_valid) {
-                if (meeting_recipes.indexOf(recipes[j]) != -1){ 
+                if (meeting_recipes.indexOf(recipes[j]) != -1) {
                     meeting_recipes.pop(recipes[j]);
                     num_results--;
                 }
@@ -145,7 +145,6 @@ function setSearchResult(keywords, category) {
             }
         }
     }
-
     // Hold the result container DOM
     var result_container = document.getElementById("search_result_container");
     if (document.getElementById("search_recipe").value == "") {
@@ -160,7 +159,7 @@ function setSearchResult(keywords, category) {
     // Set the inner DOM of the results to the table
     result_container.innerHTML = '<table class="table table-hover"><thead><tr class="d-flex"><th class="col-9">Name</th><th class="col-3">Duration</th></tr></thead><tbody id="search_results"></tbody></table>';
     // Basic template for the query result table
-    var template = '<tr class="d-flex" onclick="displayInfo({id});"><th class="col-9">{name}</th><th class="col-3">{duration} minutes</th></tr>';
+    var template = '<tr class="d-flex" onclick="displayInfo({id});"><th class="col-9">{name}</th><th class="col-3 text-center">{duration} minutes</th></tr>';
     // reuse the tmp value
     tmp = "";
 
