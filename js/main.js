@@ -247,17 +247,18 @@ function startTimer(timer_id, button){
         if (time_left == 0) {
             // Stop the interval
             clearInterval(timer_interval);
+            timer_running = false;
+            var btn_control = document.getElementById("btn-control");
+            btn_control.innerHTML = '<i class="fa fa-play" id="btn-control-icon"></i>';
+            btn_control.disabled = true;
             // Inform the user the timer has completed
             alert("The timer has completed.");
-            // Close the modal
-            $("#timerModal").modal();
             // Reset the time left to -1 (So it if a previously saved time remains it is not used next time)
             timer[timer_id].time_left = -1;
             // Enable the timer button
             button.disabled = false;
-            timer_running = false;
-            $("#btn-control-icon").innerHTML = '<i class="fa fa-play"></i>';
-            $("#btn-control").disabled = true;
+            // Close the modal
+            $("#timerModal").modal();
         }
     }, 1000);
 }
