@@ -1,7 +1,7 @@
 "use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "https://api.myjson.com/bins/k0sxq";
+var JSON_URL = "https://api.myjson.com/bins/zzv3i";
 var timer = [];
 var timer_interval;
 var timer_running = false;
@@ -246,7 +246,7 @@ function startTimer(timer_id, button){
         // If the timer is done
         if (time_left == 0) {
             // Stop the interval
-            clearInterval(timer_interval);
+            clearInterval(this);
             // Inform the user the timer has completed
             alert("The timer has completed.");
             // Close the modal

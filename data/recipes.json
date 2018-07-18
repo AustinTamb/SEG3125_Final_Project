@@ -306,7 +306,7 @@
             {"type": "normal", "instruction":"Mix vanilla extract with the melted chocolate mixture.", "time":"-1"},
             {"type": "normal", "instruction":"Take a cupcake tray and put cupcake holders in each container then pour half of the mixture into the holders.", "time":"-1"},
             {"type": "timer", "instruction":"Freeze for 15 minutes.", "time":"15"},
-            {"type": "timer", "instruction":"Put peanut butter and saved coconut oil in a bowl and microwave for 15 seconds.", "time":"1"},
+            {"type": "timer", "instruction":"Put peanut butter and saved coconut oil in a bowl and microwave for 15 seconds.", "time":"0.25"},
             {"type": "normal", "instruction":"Pour peanut butter mix on to each cupcake", "time":"-1"},
             {"type": "timer", "instruction":"Freeze for 5 minutes.", "time":"5"},
             {"type": "normal", "instruction":"Pour other half of chocolate mixture on top of each cupcake.", "time":"-1"},
