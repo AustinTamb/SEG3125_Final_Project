@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name":"Baked potatoes",
+        "name":"Baked Potatoes",
         "ingredients":[ 
             {"name":"Potatoes", "amount": "1 package"}, 
             {"name":"Water", "amount": "3 cups"}, 
@@ -33,7 +33,7 @@
 
     {
         "id": 1,
-        "name":"Apple slices",
+        "name":"Apple Slices",
         "ingredients":[ 
             {"name":"apple", "amount": "1"} 
         ],
@@ -48,7 +48,7 @@
 
     {
         "id": 2,
-        "name":"Orange slices",
+        "name":"Orange Slices",
         "ingredients":[ 
             {"name":"orange", "amount": "1"}
         ],
@@ -129,7 +129,7 @@
 
     {
         "id": 6,
-        "name":"Roast duck",
+        "name":"Roast Duck",
         "ingredients":[ 
             {"name":"Duck", "amount": "Whole"}, 
             {"name":"5 spice seasoning", "amount": "8 tbsp"},
@@ -155,7 +155,7 @@
 
     {
         "id": 7,
-        "name":"Fried chicken",
+        "name":"Fried Chicken",
         "ingredients":[ 
             {"name":"Chicken", "amount": "Some?"}, 
             {"name":"Flour", "amount": "2 cups"},
@@ -179,7 +179,7 @@
             {"type": "normal", "instruction":"Take out and place each chicken in the flour bowl and cover each.", "time":"-1"},
             {"type": "normal", "instruction":"Take out and place in the egg bowl to get a layer of egg wash.", "time":"-1"},
             {"type": "normal", "instruction":"Take out and place in the bread crumb bowl and get a layer of the mixture", "time":"-1"},
-            {"type": "timer", "instruction":"Pour oil into a pan and heat on the stove at medium heat.", "time":"5"},
+            {"type": "timer", "instruction":"Pour oil into a pan and heat on the stove at medium heat for 5 minutes.", "time":"5"},
             {"type": "normal", "instruction":"Place each chicken in the oil and fry to a golden brown.", "time":"-1"},
             {"type": "normal", "instruction":"Remove from oil after it is cooked and dry with a papertowel and enjoy.", "time":"-1"}
         ],
@@ -188,7 +188,7 @@
 
     {
         "id": 8,
-        "name":"Sack of nuts",
+        "name":"Sack of Nuts",
         "ingredients":[ 
             {"name":"Peanuts", "amount": "1/2 lbs"}, 
             {"name":"Pistachio", "amount": "1/3 lbs"}, 
@@ -213,7 +213,7 @@
         ],
         "duration":"10",
         "steps": [
-            {"type": "timer", "instruction":"Heat cream on stove top on medium heat.", "time":"3"},
+            {"type": "timer", "instruction":"Heat cream on stove top on medium heat for 3 minutes.", "time":"3"},
             {"type": "normal", "instruction":"Add chocolate to heated cream and melt chocolate.", "time":"-1"},
             {"type": "normal", "instruction":"Put all nuts in a bag and pour white chocoalte on to and mix together.", "time":"-1"}
         ],
@@ -271,7 +271,7 @@
 
     {
         "id": 11,
-        "name":"Vanilla banana ice cream",
+        "name":"Vanilla Banana Ice Cream",
         "ingredients":[ 
             {"name":"Bananas", "amount": "3"}, 
             {"name":"Milk", "amount": "1/4 cup"}, 
@@ -292,7 +292,7 @@
 
     {
         "id": 12,
-        "name":"Peanut butter cups",
+        "name":"Peanut Butter Cups",
         "ingredients":[ 
             {"name":"Dark chocolate", "amount": "1 cup"}, 
             {"name":"Coconut oil", "amount": "1/4 cup"}, 
@@ -302,7 +302,7 @@
         "duration":"95",
         "steps": [
             {"type": "normal", "instruction":"Save 2 tbsp of coconut oil on the side.", "time":"-1"},
-            {"type": "timer", "instruction":"Put dark chocolate and coconut oil in a bowl and microwave for 45 seconds.", "time":"1"},
+            {"type": "timer", "instruction":"Put dark chocolate and coconut oil in a bowl and microwave for 45 seconds.", "time":"0.75"},
             {"type": "normal", "instruction":"Mix vanilla extract with the melted chocolate mixture.", "time":"-1"},
             {"type": "normal", "instruction":"Take a cupcake tray and put cupcake holders in each container then pour half of the mixture into the holders.", "time":"-1"},
             {"type": "timer", "instruction":"Freeze for 15 minutes.", "time":"15"},
@@ -310,7 +310,7 @@
             {"type": "normal", "instruction":"Pour peanut butter mix on to each cupcake", "time":"-1"},
             {"type": "timer", "instruction":"Freeze for 5 minutes.", "time":"5"},
             {"type": "normal", "instruction":"Pour other half of chocolate mixture on top of each cupcake.", "time":"-1"},
-            {"type": "timer", "instruction":"Freeze for 1 hour.", "time":"60"},
+            {"type": "timer", "instruction":"Freeze for an hour.", "time":"60"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
         "image":"data/img/Food12.JPG"
@@ -318,7 +318,7 @@
 
     {
         "id": 13,
-        "name":"Coconut mango sorbet",
+        "name":"Coconut Mango Sorbet",
         "ingredients":[ 
             {"name":"Frozen mangoes", "amount": "2 cup"}, 
             {"name":"Coconut milk", "amount": "1/2 cup"}, 
@@ -337,7 +337,7 @@
 
     {
         "id": 14,
-        "name":"Strawberry banana cream pops",
+        "name":"Strawberry Banana Cream Pops",
         "ingredients":[ 
             {"name":"Banana", "amount": "1"}, 
             {"name":"Coconut milk", "amount": "2 cups"}, 
@@ -357,7 +357,7 @@
 
     {
         "id": 15,
-        "name":"Kiwi sorbet",
+        "name":"Kiwi Sorbet",
         "ingredients":[ 
             {"name":"Frozen kiwis", "amount": "2 1/2 cups"}, 
             {"name":"Coconut milk", "amount": "1/4 cup"}, 
@@ -376,7 +376,7 @@
 
     {
         "id": 16,
-        "name":"5-min mac and cheese",
+        "name":"Macaroni and Cheese",
         "ingredients":[ 
             {"name":"Macaroni", "amount": "1/2 cup"}, 
             {"name":"Water", "amount": "1/2 cup"}, 
@@ -398,7 +398,7 @@
 
     {
         "id": 17,
-        "name":"Mozzarella sticks",
+        "name":"Mozzarella Sticks",
         "ingredients":[ 
             {"name":"Cheese stick", "amount": "1 bag"}, 
             {"name":"Wonton wrappers", "amount": "2 packages"}, 
@@ -416,7 +416,7 @@
             {"type": "normal", "instruction":"Mix salt, bread crumbs and garlic powder in a bowl.", "time":"-1"},
             {"type": "normal", "instruction":"Cover each wrap with bread crumb cover.", "time":"-1"},
             {"type": "normal", "instruction":"Heat pan on medium heat with oil.", "time":"-1"},
-            {"type": "timer", "instruction":"Deep fry for 5 min each.", "time":"5"},
+            {"type": "timer", "instruction":"Deep fry for 5 minutes each.", "time":"5"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
         "image":"data/img/Food17.JPG"
@@ -424,7 +424,7 @@
 
     {
         "id": 18,
-        "name":"Chicken nachos",
+        "name":"Chicken Nachos",
         "ingredients":[ 
             {"name":"Rotisserie chicken", "amount": "1 cup"}, 
             {"name":"BBQ sauce", "amount": "3 tbsp"}, 
@@ -451,7 +451,7 @@
 
     {
         "id": 19,
-        "name":"Raspberry cheese cake",
+        "name":"Raspberry Cheese Cake",
         "ingredients":[ 
             {"name":"Butter", "amount": "1 tbsp"}, 
             {"name":"Graham crackers", "amount": "2"}, 
@@ -467,7 +467,7 @@
             {"type": "normal", "instruction":"Crush the graham crackers and mix with butter then press to the bottom of the bowl.", "time":"-1"},
             {"type": "normal", "instruction":"In a seperate bowl, mix vanilla extract, cream cheese and sugar.", "time":"-1"},
             {"type": "normal", "instruction":"Pour mixture on top of the graham cracker layer.", "time":"-1"},
-            {"type": "timer", "instruction":"Microwave for 4 minutes in 1 minute intervals.", "time":"1"},
+            {"type": "timer", "instruction":"Microwave for 4 minutes in 1 minute intervals.", "time":"4"},
             {"type": "timer", "instruction":"Chill in freezer for 5 min.", "time":"5"},
             {"type": "normal", "instruction":"Place raspberries on top.", "time":"-1"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
@@ -477,7 +477,7 @@
 
     {
         "id": 20,
-        "name":"Slow roasted ribs",
+        "name":"Slow Roasted Ribs",
         "ingredients":[ 
             {"name":"Pork ribs", "amount": "1 rack"}, 
             {"name":"Paprika", "amount": "4 tbsp"}, 
@@ -505,7 +505,7 @@
     
     {
         "id": 21,
-        "name":"Chicken parmesan garlic slider",
+        "name":"Chicken Parmesan Garlic Slider",
         "ingredients":[ 
             {"name":"Chicken brest", "amount": "1"}, 
             {"name":"Bread crumbs", "amount": "2 cup"}, 
@@ -537,6 +537,5 @@
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
         "image":"data/img/Food21.JPG"
-    }
-    
+    }   
 ]

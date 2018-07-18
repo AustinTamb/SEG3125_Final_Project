@@ -1,7 +1,7 @@
 "use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "https://api.myjson.com/bins/nh48u";
+var JSON_URL = "https://api.myjson.com/bins/k0sxq";
 var timer = [];
 var timer_interval;
 
@@ -59,6 +59,7 @@ function displayInfo(id) {
 }
 
 function setSearchResult(keywords, category) {
+    document.getElementById("numResults").style.display = "none";
     // Behemoth that completes the query.
     // temp value to store "cleaned" string
     var tmp;
@@ -78,9 +79,11 @@ function setSearchResult(keywords, category) {
     var ingredients;
     // temp variable to hold if the current keyword is a not_keyword
     var not_keyword;
-
+    // Number of results found
+    var num_results = 0;
     // Looping through recipes first since you only want to check all of those values once
     var i, j, k;
+    
     for (j in recipes) {
         // Assume that all the keywords are valid from the start.
         all_valid = true;
@@ -131,10 +134,14 @@ function setSearchResult(keywords, category) {
 
             // If all the keywords are invalid, remove the recipe otherwise add it. Only try to add/remove if it's not/already in the array.    
             if (!all_valid) {
-                if (meeting_recipes.indexOf(recipes[j]) != -1) meeting_recipes.pop(recipes[j]);
+                if (meeting_recipes.indexOf(recipes[j]) != -1){ 
+                    meeting_recipes.pop(recipes[j]);
+                    num_results--;
+                }
                 // break keywords loop and move on to next recipe
             } else {
                 if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
+                num_results++;
             }
         }
     }
@@ -164,6 +171,8 @@ function setSearchResult(keywords, category) {
 
     // add it to the container
     document.getElementById("search_results").innerHTML = tmp;
+    document.getElementById("num_results").innerHTML = num_results;
+    document.getElementById("numResults").style.display = "block";
 }
 
 function startCooking(recipeId) {
