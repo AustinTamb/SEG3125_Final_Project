@@ -28,7 +28,7 @@
             {"type": "normal", "instruction":"Place sour cream, green onions and bacon on each potatoe.", "time":"-1"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food.jpg"
+        "image":"data/img/food.JPG"
     },
 
     {
@@ -43,7 +43,7 @@
             {"type": "normal", "instruction":"Slice each side cut off into 3 pieces.", "time":"-1"},
             {"type": "normal", "instruction":"Cut the remaining 2 sides off of the apple.", "time":"-1"}
         ],
-        "image":"data/img/food1.jpg"
+        "image":"data/img/food1.JPG"
     },
 
     {
@@ -58,7 +58,7 @@
             {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"},
             {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"}
         ],
-        "image":"data/img/food2.jpg"
+        "image":"data/img/food2.JPG"
     },
 
     {
@@ -78,7 +78,7 @@
             {"type": "timer", "instruction":"Cook on the stove for 3 minutes.", "time":"3"},
             {"type": "normal", "instruction":"Remove from heat and add down sugar in you like to.", "time":"-1"}
         ],
-        "image":"data/img/food3.jpg"
+        "image":"data/img/food3.JPG"
     },
 
     {
@@ -93,7 +93,7 @@
             {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
             {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
         ],
-        "image":"data/img/food4.jpg"
+        "image":"data/img/food4.JPG"
     },
 
     {
@@ -123,7 +123,7 @@
             {"type": "timer", "instruction":"Place in the oven for 25 minutes.", "time":"25"},
             {"type": "timer", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
         ],
-        "image":"data/img/food5.jpg"
+        "image":"data/img/food5.JPG"
 
     },
 
@@ -150,7 +150,7 @@
             {"type": "timer", "instruction":"Cook for another 20 minutes.", "time":"20"},
             {"type": "normal", "instruction":"Remove from oven and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food6.jpg"
+        "image":"data/img/food6.JPG"
     },
 
     {
@@ -183,7 +183,7 @@
             {"type": "normal", "instruction":"Place each chicken in the oil and fry to a golden brown.", "time":"-1"},
             {"type": "normal", "instruction":"Remove from oil after it is cooked and dry with a papertowel and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food7.jpg"
+        "image":"data/img/food7.JPG"
     },
 
     {
@@ -217,7 +217,7 @@
             {"type": "normal", "instruction":"Add chocolate to heated cream and melt chocolate.", "time":"-1"},
             {"type": "normal", "instruction":"Put all nuts in a bag and pour white chocoalte on to and mix together.", "time":"-1"}
         ],
-        "image":"data/img/food8.jpg"
+        "image":"data/img/food8.JPG"
     },
 
     {
@@ -241,7 +241,7 @@
             {"type": "normal", "instruction":"Add salt and pepper.", "time":"-1"},
             {"type": "normal", "instruction":"Mix together and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food9.jpg"
+        "image":"data/img/food9.JPG"
     },
 
     {
@@ -266,7 +266,7 @@
             {"type": "timer", "instruction":"Bake for 15 minutes.", "time":"15"},
             {"type": "normal", "instruction":"Cut and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food10.jpg"
+        "image":"data/img/food10.JPG"
     },
 
     {
@@ -287,7 +287,7 @@
             {"type": "timer", "instruction":"Freeze for an hour.", "time":"60"},
             {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food11.jpg"
+        "image":"data/img/food11.JPG"
     },
 
     {
@@ -313,7 +313,7 @@
             {"type": "timer", "instruction":"Freeze for 1 hour.", "time":"60"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food12.jpg"
+        "image":"data/img/food12.JPG"
     },
 
     {
@@ -332,7 +332,7 @@
             {"type": "timer", "instruction":"Freeze for 2 hours.", "time":"120"},
             {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food13.jpg"
+        "image":"data/img/food13.JPG"
     },
 
     {
@@ -352,7 +352,7 @@
             {"type": "timer", "instruction":"Freeze for 4 hours.", "time":"240"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food14.jpg"
+        "image":"data/img/food14.JPG"
     },
 
     {
@@ -371,7 +371,7 @@
             {"type": "timer", "instruction":"Freeze for 2 hours.", "time":"120"},
             {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food15.jpg"
+        "image":"data/img/food15.JPG"
     },
 
     {
@@ -393,7 +393,7 @@
             {"type": "timer", "instruction":"Microwave for 30 seconds.", "time":"0.5"},
             {"type": "normal", "instruction":"Mix and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food16.jpg"
+        "image":"data/img/food16.JPG"
     },
 
     {
@@ -419,7 +419,7 @@
             {"type": "timer", "instruction":"Deep fry for 5 min each.", "time":"5"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food17.jpg"
+        "image":"data/img/food17.JPG"
     },
 
     {
@@ -446,7 +446,7 @@
             {"type": "normal", "instruction":"Pour guacamole and sour cream on top.", "time":"-1"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food18.jpg"
+        "image":"data/img/food18.JPG"
     },
 
     {
@@ -472,7 +472,7 @@
             {"type": "normal", "instruction":"Place raspberries on top.", "time":"-1"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food19.jpg"
+        "image":"data/img/food19.JPG"
     },
 
     {
@@ -499,7 +499,7 @@
             {"type": "normal", "instruction":"Mix with sauce and place cut green onion on top.", "time":"-1"},
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food20.jpg"
+        "image":"data/img/food20.JPG"
     },
 
     
@@ -536,7 +536,7 @@
             {"type": "timer", "instruction":"Wrap in tin foil and cook in the oven for 15 minutes.", "time":"15"},            
             {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
-        "image":"data/img/food21.jpg"
+        "image":"data/img/food21.JPG"
     }
     
 ]

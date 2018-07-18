@@ -1,7 +1,7 @@
 "use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "https://api.myjson.com/bins/c3qla";
+var JSON_URL = "https://api.myjson.com/bins/y4rz2";
 var timer = [];
 var timer_interval;
 
