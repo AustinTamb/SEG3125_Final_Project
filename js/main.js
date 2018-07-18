@@ -4,6 +4,8 @@ var recipes = [];
 var JSON_URL = "https://api.myjson.com/bins/k0sxq";
 var timer = [];
 var timer_interval;
+var timer_running = false;
+var time_left;
 
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
@@ -227,21 +229,16 @@ function generateRecipePage() {
     });
 }
 
-function waitStep(timer_id, button) {
-    // This just updates the timer modal and makes the timer functional
-    // Disable the button so multiple timers aren't started
-    button.disabled = true;
+function startTimer(timer_id, button){
     // Turn minute wait time into s (m * 60s/min). Select between previously saved time if it's != -1, otherwise use default
-    var time_left = timer[timer_id].time_left == -1 ? timer[timer_id].time : timer[timer_id].time_left;
+    time_left = timer[timer_id].time_left == -1 ? timer[timer_id].time : timer[timer_id].time_left;
     var minutes = document.getElementById("timer_minutes");
     var seconds = document.getElementById("timer_seconds");
 
     minutes.innerHTML = parseInt(time_left / 60);
     seconds.innerHTML = ("0" + (time_left % 60)).slice(-2);
 
-    $("#timerModal").modal();
-    // Set interval between running the steps inside the function
-    timer_interval = setInterval(function () {
+    return setInterval(function () {
         // Sets minutes
         minutes.innerHTML = parseInt(--time_left / 60);
         // Sets seconds
@@ -258,10 +255,28 @@ function waitStep(timer_id, button) {
             timer[timer_id].time_left = -1;
             // Enable the timer button
             button.disabled = false;
+            timer_running = false;
+            $("#btn-control-icon").innerHTML = '<i class="fa fa-play"></i>';
+            $("#btn-control").disabled = true;
         }
     }, 1000);
+}
+
+function waitStep(timer_id, button) {
+    // This just updates the timer modal and makes the timer functional
+    // Disable the button so multiple timers aren't started
+    var tmp_icon;
+    button.disabled = true;
+    timer_running = true;
+    $("#btn-control").disabled = false;
+    $("#btn-control-icon").innerHTML = '<i class="fa fa-pause"></i>';
+    
+    timer_interval = startTimer(timer_id, button);
+    $("#timerModal").modal();
+    // Set interval between running the steps inside the function
+    
     // Remove all event listeners on the close and exit buttons
-    $("#timer_close, #timer_exit").off("click");
+    $("#timer_close, #timer_exit, #btn-control").off("click");
     // Add new event listener onto it
     $("#timer_close, #timer_exit").on("click", function () {
         // Stop timer
@@ -274,7 +289,23 @@ function waitStep(timer_id, button) {
         // Enable start timer button
         button.disabled = false;
     });
+
+    $("#btn-control").on("click", function(){
+        console.log(timer_interval);
+        if (timer_running) {
+            clearInterval(timer_interval);
+            timer[timer_id].time_left = time_left;
+            tmp_icon = "fa fa-play";
+        } else {
+            timer_interval = startTimer(timer_id, button);
+            tmp_icon = "fa fa-pause";
+        }
+        timer_running = !timer_running;
+        this.innerHTML = '<i class="' + tmp_icon + '"></i>';
+    });
 }
+
+
 
 function replaceFractions(to_parse) {
     // This function just replaces fractions into single characters
