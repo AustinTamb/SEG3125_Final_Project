@@ -30,6 +30,13 @@ $(document).ready(function () {
     $("#btn_search, #search_category").on("click", function () {
         searchChanged();
     });
+
+    $(".nav-item").on("click", function(){
+        $("#navbarSupportedContent").collapse('toggle');
+    });
+
+    console.log(document.getElementById("search_recipe").style.height, document.getElementById("search_category").style.height);
+    //document.getElementById("search_recipe").style.height = document.getElementById("search_category").style.height;
 });
 
 function searchChanged() {

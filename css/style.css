@@ -87,6 +87,11 @@ search_container {
     padding-bottom: 0.5rem;
 }
 
+.form-control {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+
 @media (max-width: 500px) { 
     body{
         font-size: 0.7rem;
@@ -96,8 +101,6 @@ search_container {
     }
     .form-control, .btn {
         font-size: 0.7rem;
-        padding-left: 0.1rem;
-        padding-right: 0.1rem;
     }
 }
 
@@ -110,7 +113,7 @@ search_container {
 }
 
 #search {
-    height: 100vh !important;
+    height: 100vh !important;  
 }
 
 #recipeInfoIng {
