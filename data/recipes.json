@@ -1,25 +1,39 @@
 [
     {
         "id": 0,
-        "name":"Roast duck",
+        "name":"Baked potatoes",
         "ingredients":[ 
-            {"name":"Duck", "amount": "Whole"}, 
-            {"name":"5 spice seasoning", "amount": "8 tbls"},
-            {"name":"Salt", "amount": "2 tbs"},
-            {"name":"Water", "amount": "2 tbls"},
-            {"name":"Garlic", "amount": "2 tbls"},
-            {"name":"Soy Sauce", "amount": "8 tbls"}
+            {"name":"Potatoes", "amount": "1 package"}, 
+            {"name":"Water", "amount": "3 cups"}, 
+            {"name":"Salt", "amount": "2 tbsp"}, 
+            {"name":"Pepper", "amount": "1 tbsp"}, 
+            {"name":"Sour cream", "amount": "1/2 cups"}, 
+            {"name":"Green onions", "amount": "5 stalks"},
+            {"name":"Bacon", "amount": "1 package"},  
+            {"name":"Butter", "amount": "3 tbsp"}
         ],
         "duration":"10",
         "steps": [
-            {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
-            {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
+            {"type": "normal", "instruction":"Preheat over to 350 degrees.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix water and salt into a large bowl.", "time":"1"},
+            {"type": "normal", "instruction":"Wash potatoes and cut off the ears.", "time":"-1"},
+            {"type": "normal", "instruction":"Soak potatoes in water mix until starch seeps out.", "time":"-1"},
+            {"type": "normal", "instruction":"Poke holes in the potato with a fork.", "time":"-1"},
+            {"type": "timer", "instruction":"Bake for 25 minutes.", "time":"25"},
+            {"type": "normal", "instruction":"Fry bacon on a pan over medium heat.", "time":"-1"},
+            {"type": "normal", "instruction":"Dice green onions stalks.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix pepper with sour cream in a small bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Slice each potatoes part way through vertially.", "time":"-1"},
+            {"type": "normal", "instruction":"Spread small amount of butter in each potato.", "time":"-1"},
+            {"type": "normal", "instruction":"Place sour cream, green onions and bacon on each potatoe.", "time":"-1"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
         ],
         "image":"data/img/food.jpg"
     },
+
     {
         "id": 1,
-        "name":"Cut apples",
+        "name":"Apple slices",
         "ingredients":[ 
             {"name":"apple", "amount": "1"} 
         ],
@@ -29,8 +43,9 @@
             {"type": "normal", "instruction":"Slice each side cut off into 3 pieces.", "time":"-1"},
             {"type": "normal", "instruction":"Cut the remaining 2 sides off of the apple.", "time":"-1"}
         ],
-        "image":"data/img/food.jpg"
+        "image":"data/img/food1.jpg"
     },
+
     {
         "id": 2,
         "name":"Orange slices",
@@ -43,17 +58,18 @@
             {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"},
             {"type": "normal", "instruction":"Take each half and cut in half again.", "time":"-1"}
         ],
-        "image":"data/img/food.jpg"
+        "image":"data/img/food2.jpg"
     },
+
     {
         "id": 3,
         "name":"Oatmeal",
         "ingredients":[ 
             {"name":"Oats", "amount": "2 cups"}, 
-            {"name":"Brown Sugar", "amount": "5 tbls"}, 
+            {"name":"Brown Sugar", "amount": "5 tbsp"}, 
             {"name":"Milk", "amount": "1/4 cup"}
         ],
-        "duration":"3",
+        "duration":"10",
         "steps": [
             {"type": "normal", "instruction":"Fill a bowl with the oats.", "time":"-1"},
             {"type": "normal", "instruction":"Mix milk with the oats in a bowl.", "time":"-1"},
@@ -62,9 +78,9 @@
             {"type": "timer", "instruction":"Cook on the stove for 3 minutes.", "time":"3"},
             {"type": "normal", "instruction":"Remove from heat and add down sugar in you like to.", "time":"-1"}
         ],
-        "image":"data/img/food.jpg"
-
+        "image":"data/img/food3.jpg"
     },
+
     {
         "id": 4,
         "name":"Cereal",
@@ -77,28 +93,28 @@
             {"type": "normal", "instruction":"Fill a bowl with the cereal.", "time":"-1"},
             {"type": "normal", "instruction":"Add milk to the bowl.", "time":"-1"}
         ],
-        "image":"data/img/food.jpg"
-
+        "image":"data/img/food4.jpg"
     },
+
     {
         "id": 5,
         "name":"Pizza",
         "ingredients":[ 
             {"name":"Dough", "amount": "1 lbs"}, 
             {"name":"Cheese", "amount": "1/2 cup"},
-            {"name":"Olive oil", "amount": "3 tbs"},
+            {"name":"Olive oil", "amount": "3 tsps"},
             {"name":"Garlic", "amount": "2 cloves"},
             {"name":"Butter", "amount": "1/8 cup"}, 
-            {"name":"Oregano", "amount": "2 tbs"},
-            {"name":"Thyme", "amount": "1 teaspoon"},
+            {"name":"Oregano", "amount": "2 tsps"},
+            {"name":"Thyme", "amount": "1 tsp"},
             {"name":"Tomato sauce", "amount": "1/4 cup"}
         ],
-        "duration":"30-40",
+        "duration":"30",
         "steps": [
             {"type": "normal", "instruction":"Preheat oven to 350 F.", "time":"-1"},
             {"type": "normal", "instruction":"Roll out dough into a circle with excess dough around the edges.", "time":"-1"},
             {"type": "normal", "instruction":"Peel and mince garlic.", "time":"-1"},
-            {"type": "normal", "instruction":"Melt butter and mix with garlic, thyme and 1 teaspoon of oregano.", "time":"-1"},
+            {"type": "normal", "instruction":"Melt butter and mix with garlic, thyme and 1 tsp of oregano.", "time":"-1"},
             {"type": "normal", "instruction":"Spread tomato sauce on the center portion of the dough in an even layer", "time":"-1"},
             {"type": "normal", "instruction":"Spread cheese on the tomato sauce.", "time":"-1"},
             {"type": "normal", "instruction":"Add leftover oregano over the cheese.", "time":"-1"},
@@ -106,8 +122,421 @@
             {"type": "normal", "instruction":"Brush butter mix over the edges of the dough", "time":"-1"},
             {"type": "timer", "instruction":"Place in the oven for 25 minutes.", "time":"25"},
             {"type": "timer", "instruction":"Remove and let cool for 5 minutes.", "time":"5"}
-
         ],
-        "image":"data/img/food.jpg"
+        "image":"data/img/food5.jpg"
+
+    },
+
+    {
+        "id": 6,
+        "name":"Roast duck",
+        "ingredients":[ 
+            {"name":"Duck", "amount": "Whole"}, 
+            {"name":"5 spice seasoning", "amount": "8 tbsp"},
+            {"name":"Salt", "amount": "2 tsps"},
+            {"name":"Water", "amount": "2 tbsp"},
+            {"name":"Garlic", "amount": "2 cloves"},
+            {"name":"Soy Sauce", "amount": "8 tbsp"}
+        ],
+        "duration":"90",
+        "steps": [
+            {"type": "normal", "instruction":"Preheat oven to 400F", "time":"-1"},
+            {"type": "normal", "instruction":"Wash duck to clean off blood.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix soysauce, water and garlic in a bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Place duck in a large crock pot and pour water and soysauce mixture on top.", "time":"-1"},
+            {"type": "normal", "instruction":"Season outside and inside of duck with spice seasoning and salt.", "time":"-1"},
+            {"type": "timer", "instruction":"Place in oven for 50 minutes.", "time":"50"},
+            {"type": "normal", "instruction":"Remove from oven and baste sauce over the duck.", "time":"-1"},
+            {"type": "timer", "instruction":"Cook for another 20 minutes.", "time":"20"},
+            {"type": "normal", "instruction":"Remove from oven and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food6.jpg"
+    },
+
+    {
+        "id": 7,
+        "name":"Fried chicken",
+        "ingredients":[ 
+            {"name":"Chicken", "amount": "Some?"}, 
+            {"name":"Flour", "amount": "2 cups"},
+            {"name":"Break crumbs", "amount": "2 cups"},
+            {"name":"Eggs", "amount": "2"},
+            {"name":"Pepper", "amount": "3 tsp"},
+            {"name":"Salt", "amount": "3 tsp"},
+            {"name":"Garlic powder", "amount": "2 tsp"},
+            {"name":"Cajun", "amount": "2 tsp"},
+            {"name":"Paprika", "amount": "2 tsp"},
+            {"name":"Canola Oil", "amount": "2 cups"}
+        ],
+        "duration":"45",
+        "steps": [
+            {"type": "normal", "instruction":"Wash each piece of chicken to rinse off blood.", "time":"-1"},
+            {"type": "normal", "instruction":"Put flour, bread crumbs and eggs in 3 sepreate bowls.", "time":"-1"},
+            {"type": "normal", "instruction":"Beat eggs.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix in pepper, salt, garlic powder and paprika with the breadcrumbs", "time":"-1"},
+            {"type": "normal", "instruction":"Place each chicken in the flour bowl and cover each.", "time":"-1"},
+            {"type": "normal", "instruction":"Take out and place in the egg bowl to get a layer of egg wash.", "time":"-1"},
+            {"type": "normal", "instruction":"Take out and place each chicken in the flour bowl and cover each.", "time":"-1"},
+            {"type": "normal", "instruction":"Take out and place in the egg bowl to get a layer of egg wash.", "time":"-1"},
+            {"type": "normal", "instruction":"Take out and place in the bread crumb bowl and get a layer of the mixture", "time":"-1"},
+            {"type": "timer", "instruction":"Pour oil into a pan and heat on the stove at medium heat.", "time":"5"},
+            {"type": "normal", "instruction":"Place each chicken in the oil and fry to a golden brown.", "time":"-1"},
+            {"type": "normal", "instruction":"Remove from oil after it is cooked and dry with a papertowel and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food7.jpg"
+    },
+
+    {
+        "id": 8,
+        "name":"Sack of nuts",
+        "ingredients":[ 
+            {"name":"Peanuts", "amount": "1/2 lbs"}, 
+            {"name":"Pistachio", "amount": "1/3 lbs"}, 
+            {"name":"Cashew", "amount": "2/3 lbs"}, 
+            {"name":"Candlenut", "amount": "1/4 lbs"},
+            {"name":"Kola nut", "amount": "3/4 lbs"},
+            {"name":"Jack nut", "amount": "1/5 lbs"},
+            {"name":"Mongongo", "amount": "2/5 lbs"},
+            {"name":"Areca nut", "amount": "3/5 lbs"},
+            {"name":"Walnut", "amount": "4/5 lbs"},
+            {"name":"Bat nut", "amount": "1/6 lbs"},
+            {"name":"Corn nut", "amount": "5/6 lbs"},
+            {"name":"Betel nut", "amount": "1/7 lbs"},
+            {"name":"Coconut", "amount": "1/8 lbs"},
+            {"name":"Karuka", "amount": "3/8 lbs"},
+            {"name":"Hazel nut", "amount": "5/8 lbs"},            
+            {"name":"Almonds", "amount": "7/8 lbs"},
+            {"name":"Gabon nut", "amount": "1/9 lbs"},
+            {"name":"Waluigi's nut", "amount": "1/10th"},
+            {"name":"White chocolate", "amount": "2 cups"} ,
+            {"name":"10% cream", "amount": "1/2 cup"}  
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "timer", "instruction":"Heat cream on stove top on medium heat.", "time":"3"},
+            {"type": "normal", "instruction":"Add chocolate to heated cream and melt chocolate.", "time":"-1"},
+            {"type": "normal", "instruction":"Put all nuts in a bag and pour white chocoalte on to and mix together.", "time":"-1"}
+        ],
+        "image":"data/img/food8.jpg"
+    },
+
+    {
+        "id": 9,
+        "name":"Guacamole",
+        "ingredients":[ 
+            {"name":"Advocado", "amount": "2"}, 
+            {"name":"Bacon", "amount": "6 slices"}, 
+            {"name":"Onion", "amount": "1/2"}, 
+            {"name":"Jalapeno", "amount": "1"}, 
+            {"name":"Salt", "amount": "2 tsp"}, 
+            {"name":"Pepper", "amount": "1 tsp"}
+        ],
+        "duration":"15",
+        "steps": [
+            {"type": "normal", "instruction":"Heat pan on medium heat.", "time":"-1"},
+            {"type": "normal", "instruction":"Fry bacon on pan until crispy.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut advocados in half.", "time":"-1"},
+            {"type": "normal", "instruction":"Scoop out advocado and mash into a bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Dice bacon, onion and jalapenos and add tot he bowl with the advocado.", "time":"-1"},
+            {"type": "normal", "instruction":"Add salt and pepper.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix together and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food9.jpg"
+    },
+
+    {
+        "id": 10,
+        "name":"Brownies",
+        "ingredients":[ 
+            {"name":"Dark chocolate", "amount": "1 bar"}, 
+            {"name":"Water", "amount": "2 cups"}, 
+            {"name":"Eggs", "amount": "2"}, 
+            {"name":"Honey", "amount": "3 tbsp"}, 
+            {"name":"Flour", "amount": "1/2 cup"}, 
+            {"name":"Salt", "amount": "1 tsp"}
+        ],
+        "duration":"25",
+        "steps": [
+            {"type": "normal", "instruction":"Preheat oven to 350 F.", "time":"-1"},
+            {"type": "normal", "instruction":"Boil water in a pot.", "time":"-1"},
+            {"type": "normal", "instruction":"Put chocolate in a bowl above the boiling water and melt.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix honey, eggs and chocolate together.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix flour and salt with the previoux mixture.", "time":"-1"},
+            {"type": "normal", "instruction":"Get a square tray, butter and pour mixture inside.", "time":"-1"},
+            {"type": "timer", "instruction":"Bake for 15 minutes.", "time":"15"},
+            {"type": "normal", "instruction":"Cut and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food10.jpg"
+    },
+
+    {
+        "id": 11,
+        "name":"Vanilla banana ice cream",
+        "ingredients":[ 
+            {"name":"Bananas", "amount": "3"}, 
+            {"name":"Milk", "amount": "1/4 cup"}, 
+            {"name":"Vanilla bean", "amount": "1 tsp"}, 
+            {"name":"Honey", "amount": "3 tbsp"}
+        ],
+        "duration":"80",
+        "steps": [
+            {"type": "normal", "instruction":"Cut bananas into slices.", "time":"-1"},
+            {"type": "timer", "instruction":"Put bananas in freezer until solid.", "time":"10"},
+            {"type": "normal", "instruction":"Put bananas milk and vanilla bean in a blender and blend.", "time":"-1"},
+            {"type": "normal", "instruction":"Pour mixture in a bread container.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for an hour.", "time":"60"},
+            {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food11.jpg"
+    },
+
+    {
+        "id": 12,
+        "name":"Peanut butter cups",
+        "ingredients":[ 
+            {"name":"Dark chocolate", "amount": "1 cup"}, 
+            {"name":"Coconut oil", "amount": "1/4 cup"}, 
+            {"name":"Vanilla extract", "amount": "1 tsp"}, 
+            {"name":"Peanut butter", "amount": "1/2 cup"}
+        ],
+        "duration":"95",
+        "steps": [
+            {"type": "normal", "instruction":"Save 2 tbsp of coconut oil on the side.", "time":"-1"},
+            {"type": "timer", "instruction":"Put dark chocolate and coconut oil in a bowl and microwave for 45 seconds.", "time":"1"},
+            {"type": "normal", "instruction":"Mix vanilla extract with the melted chocolate mixture.", "time":"-1"},
+            {"type": "normal", "instruction":"Take a cupcake tray and put cupcake holders in each container then pour half of the mixture into the holders.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 15 minutes.", "time":"15"},
+            {"type": "timer", "instruction":"Put peanut butter and saved coconut oil in a bowl and microwave for 15 seconds.", "time":"1"},
+            {"type": "normal", "instruction":"Pour peanut butter mix on to each cupcake", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 5 minutes.", "time":"5"},
+            {"type": "normal", "instruction":"Pour other half of chocolate mixture on top of each cupcake.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 1 hour.", "time":"60"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food12.jpg"
+    },
+
+    {
+        "id": 13,
+        "name":"Coconut mango sorbet",
+        "ingredients":[ 
+            {"name":"Frozen mangoes", "amount": "2 cup"}, 
+            {"name":"Coconut milk", "amount": "1/2 cup"}, 
+            {"name":"Greek yogurt", "amount": "1/4 cup"}, 
+            {"name":"Honey", "amount": "4 tbsp"}
+        ],
+        "duration":"130",
+        "steps": [
+            {"type": "normal", "instruction":"Pour mangoes, coconut milk, greek yogurt and honey into a blender and blend till smooth", "time":"-1"},
+            {"type": "normal", "instruction":"Pour mixture into a square tray.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 2 hours.", "time":"120"},
+            {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food13.jpg"
+    },
+
+    {
+        "id": 14,
+        "name":"Strawberry banana cream pops",
+        "ingredients":[ 
+            {"name":"Banana", "amount": "1"}, 
+            {"name":"Coconut milk", "amount": "2 cups"}, 
+            {"name":"Strawberries", "amount": "1/2 cup"}, 
+            {"name":"Honey", "amount": "2 tbsp"}
+        ],
+        "duration":"260",
+        "steps": [
+            {"type": "normal", "instruction":"Pour coconut milk, the banana, strawberries and honey into a blender and blend till smooth", "time":"-1"},
+            {"type": "normal", "instruction":"Pour mixture into ice cube tray.", "time":"-1"},
+            {"type": "normal", "instruction":"Place tinfoil on top of the traya dn place tooth picks throught the tin foil into each cube.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 4 hours.", "time":"240"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food14.jpg"
+    },
+
+    {
+        "id": 15,
+        "name":"Kiwi sorbet",
+        "ingredients":[ 
+            {"name":"Frozen kiwis", "amount": "2 1/2 cups"}, 
+            {"name":"Coconut milk", "amount": "1/4 cup"}, 
+            {"name":"Honey", "amount": "1/4 cup"}
+        ],
+        "duration":"130",
+        "steps": [
+            {"type": "normal", "instruction":"Pour frozen kiwis and honey into a blender and blend till smooth", "time":"-1"},
+            {"type": "normal", "instruction":"Pour mixture into square tray tray.", "time":"-1"},
+            {"type": "normal", "instruction":"Pour light layer of coconut milk on top.", "time":"-1"},
+            {"type": "timer", "instruction":"Freeze for 2 hours.", "time":"120"},
+            {"type": "normal", "instruction":"Scoop and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food15.jpg"
+    },
+
+    {
+        "id": 16,
+        "name":"5-min mac and cheese",
+        "ingredients":[ 
+            {"name":"Macaroni", "amount": "1/2 cup"}, 
+            {"name":"Water", "amount": "1/2 cup"}, 
+            {"name":"Milk", "amount": "4 tbsp"},
+            {"name":"Shredded cheese", "amount": "3 tbsp"}, 
+            {"name":"Pepper", "amount": "1 tsp"},  
+            {"name":"Salt", "amount": "1 tsp"}
+        ],
+        "duration":"5",
+        "steps": [
+            {"type": "normal", "instruction":"Pour macaroni, water and salt into a cup", "time":"-1"},
+            {"type": "timer", "instruction":"Microwave for 3 min.", "time":"3"},
+            {"type": "normal", "instruction":"Mix milk cheese and pepper with the macaroni.", "time":"-1"},
+            {"type": "timer", "instruction":"Microwave for 30 seconds.", "time":"0.5"},
+            {"type": "normal", "instruction":"Mix and enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food16.jpg"
+    },
+
+    {
+        "id": 17,
+        "name":"Mozzarella sticks",
+        "ingredients":[ 
+            {"name":"Cheese stick", "amount": "1 bag"}, 
+            {"name":"Wonton wrappers", "amount": "2 packages"}, 
+            {"name":"Eggs", "amount": "2"},
+            {"name":"Oil", "amount": "3 cups"},
+            {"name":"Break crumbs", "amount": "1 cup"}, 
+            {"name":"Garlic powder", "amount": "2 tbsp"},  
+            {"name":"Salt", "amount": "2 tsp"}
+        ],
+        "duration":"15",
+        "steps": [
+            {"type": "normal", "instruction":"Beat eggs into a bowl", "time":"-1"},
+            {"type": "normal", "instruction":"Wrap the cheese sticks in wonton wrappers and close with egg wash.", "time":"-1"},
+            {"type": "normal", "instruction":"Cover each wrap with egg wash.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix salt, bread crumbs and garlic powder in a bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Cover each wrap with bread crumb cover.", "time":"-1"},
+            {"type": "normal", "instruction":"Heat pan on medium heat with oil.", "time":"-1"},
+            {"type": "timer", "instruction":"Deep fry for 5 min each.", "time":"5"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food17.jpg"
+    },
+
+    {
+        "id": 18,
+        "name":"Chicken nachos",
+        "ingredients":[ 
+            {"name":"Rotisserie chicken", "amount": "1 cup"}, 
+            {"name":"BBQ sauce", "amount": "3 tbsp"}, 
+            {"name":"Tortilla chips", "amount": "1 handful"},
+            {"name":"Pico de gallo", "amount": "3 cups"},
+            {"name":"Cheese", "amount": "1 cup"}, 
+            {"name":"Green onion", "amount": "1/4 cup"},  
+            {"name":"Guacamole", "amount": "2 tsp"},
+            {"name":"Sour crea", "amount": "2 tsp"}
+        ],
+        "duration":"10",
+        "steps": [
+            {"type": "normal", "instruction":"Mix chickena dn BBQ sauce into a bowl", "time":"-1"},
+            {"type": "normal", "instruction":"Place chips onto a plate.", "time":"-1"},
+            {"type": "normal", "instruction":"Put chicken mixture and pico de gallo on top.", "time":"-1"},
+            {"type": "timer", "instruction":"Microwave for 3 minutes.", "time":"3"},
+            {"type": "normal", "instruction":"Put cheese and green onions on top of the chips.", "time":"-1"},
+            {"type": "timer", "instruction":"Microwave for 1 minute.", "time":"1"},
+            {"type": "normal", "instruction":"Pour guacamole and sour cream on top.", "time":"-1"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food18.jpg"
+    },
+
+    {
+        "id": 19,
+        "name":"Raspberry cheese cake",
+        "ingredients":[ 
+            {"name":"Butter", "amount": "1 tbsp"}, 
+            {"name":"Graham crackers", "amount": "2"}, 
+            {"name":"Cream cheese", "amount": "4 tbsp"},
+            {"name":"Sugar", "amount": "2 tbsp"},
+            {"name":"Vanilla extract", "amount": "2 tsp"}, 
+            {"name":"Raspberries", "amount": "5"}
+        ],
+        "duration":"15",
+        "steps": [
+            {"type": "timer", "instruction":"Place butter in a small bowl and microwave for 1 minute", "time":"1"},
+            {"type": "normal", "instruction":"Roll butter to cover all edges of the bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Crush the graham crackers and mix with butter then press to the bottom of the bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"In a seperate bowl, mix vanilla extract, cream cheese and sugar.", "time":"-1"},
+            {"type": "normal", "instruction":"Pour mixture on top of the graham cracker layer.", "time":"-1"},
+            {"type": "timer", "instruction":"Microwave for 4 minutes in 1 minute intervals.", "time":"1"},
+            {"type": "timer", "instruction":"Chill in freezer for 5 min.", "time":"5"},
+            {"type": "normal", "instruction":"Place raspberries on top.", "time":"-1"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food19.jpg"
+    },
+
+    {
+        "id": 20,
+        "name":"Slow roasted ribs",
+        "ingredients":[ 
+            {"name":"Pork ribs", "amount": "1 rack"}, 
+            {"name":"Paprika", "amount": "4 tbsp"}, 
+            {"name":"Honey", "amount": "6 tbsp"},
+            {"name":"Soy sauce", "amount": "12 tbsp"},
+            {"name":"Water", "amount": "4 tbsp"}, 
+            {"name":"Salt", "amount": "4 tsp"}, 
+            {"name":"Green onions", "amount": "5 stalks"},
+            {"name":"Pepper", "amount": "2 tsp"}
+        ],
+        "duration":"300",
+        "steps": [
+            {"type": "normal", "instruction":"Wash blood off prok ribs and cut the rack int 4 equal parts.", "time":"-1"},
+            {"type": "normal", "instruction":"Cover ribs with paprika, salt and pepper.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix Honey, soysauce and water in the slow cooker.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix each rib into the slow cooker mixture.", "time":"-1"},
+            {"type": "timer", "instruction":"Set slow cooker on high for 4 hours while stirring occasionally.", "time":"240"},
+            {"type": "normal", "instruction":"Remove from slow cooker and slice into individual ribs.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix with sauce and place cut green onion on top.", "time":"-1"},
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food20.jpg"
+    },
+
+    
+    {
+        "id": 21,
+        "name":"Chicken parmesan garlic slider",
+        "ingredients":[ 
+            {"name":"Chicken brest", "amount": "1"}, 
+            {"name":"Bread crumbs", "amount": "2 cup"}, 
+            {"name":"Flour", "amount": "2 cups"},
+            {"name":"Eggs", "amount": "3"},
+            {"name":"Oil", "amount": "3 cups"}, 
+            {"name":"Baguette", "amount": "1"}, 
+            {"name":"Mozzarella squares", "amount": "1 package"},
+            {"name":"Butter", "amount": "2 tbsp"},
+            {"name":"Garlic", "amount": "2 cloves"},
+            {"name":"Parsley", "amount": "2 herbs"},
+            {"name":"Parmesan cheese", "amount": "1/4 cup"}
+        ],
+        "duration":"55",
+        "steps": [
+            {"type": "normal", "instruction":"Preheat over at 350 F.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut chicken brest into slices.", "time":"-1"},
+            {"type": "normal", "instruction":"Put flour, bread crumbs and beaten eggs into 3 seperate bowls.", "time":"-1"},
+            {"type": "normal", "instruction":"Cover each chicken with flour, eggwash and breadcrumbs in that order.", "time":"-1"},
+            {"type": "normal", "instruction":"Heat oil on medium heat in a pan.", "time":"-1"},
+            {"type": "normal", "instruction":"Fry each chicken in the oil until golden brown.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut baugette into as many chicken pieces as you have.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut out inside of each baguette piece.", "time":"-1"},
+            {"type": "normal", "instruction":"Wrap each chicken in mozzarella and place in a baguette piece.", "time":"-1"},
+            {"type": "normal", "instruction":"Cut each piece into equal pieces horizontally along the baguette.", "time":"-1"},
+            {"type": "normal", "instruction":"Mix melted butter, diced garlic, parmesan and parsley in a bowl.", "time":"-1"},
+            {"type": "normal", "instruction":"Spread on top of the baguette.", "time":"-1"},
+            {"type": "timer", "instruction":"Wrap in tin foil and cook in the oven for 15 minutes.", "time":"15"},            
+            {"type": "normal", "instruction":"Enjoy.", "time":"-1"}
+        ],
+        "image":"data/img/food21.jpg"
     }
+    
 ]
