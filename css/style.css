@@ -21,23 +21,33 @@ body {
 
 .text-bg {
     height: 100%;
-    background-color: rgb(255, 255, 255, 0.75);
+    /*background-color: rgb(255, 255, 255, 0.65);*/
+    background: linear-gradient(rgb(255,255,255,0.7),rgb(0,0,0,0.45));
     margin: 0;
     padding: 0;
 }
 
 .navbar-custom {
-    background-color: #A7DB62;
+    background-color: #323232;
     padding: 0;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: #000000;
+    color:whitesmoke;
 }
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-    color: #000000;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+h3 {
+    font-weight: 200;
 }
 
 .nav-link{
@@ -50,8 +60,8 @@ body {
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: #474747;
-    background-color: rgb(132, 187, 60);
+    color: white;
+    background-color: #4c4c4c;
 }
 
 th {
@@ -88,19 +98,26 @@ search_container {
 }
 
 .form-control {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
-@media (max-width: 500px) { 
+.container-semi-fluid{
+    max-width: 80%;
+}
+
+@media (max-width: 800px){ 
     body{
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
     .nav, .navbar-brand {
         font-size: 0.9rem;
     }
     .form-control, .btn {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+    }
+    .container-semi-fluid{
+        max-width: 100% !important;
     }
 }
 
@@ -119,4 +136,23 @@ search_container {
 #recipeInfoIng {
     max-height: 50vh;
     overflow-y: scroll;
+}
+
+.bottom-aligned {
+    position: absolute;
+    color: whitesmoke;
+    left:0;
+    right:0;
+    bottom: 0;
+    padding-bottom: 2%;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.gradient-bg {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    right:0;
 }

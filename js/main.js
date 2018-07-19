@@ -146,8 +146,10 @@ function setSearchResult(keywords, category) {
                 }
                 // break keywords loop and move on to next recipe
             } else {
-                if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
-                num_results++;
+                if (meeting_recipes.indexOf(recipes[j]) == -1) {
+                    meeting_recipes.push(recipes[j]);
+                    num_results++;
+                }
             }
         }
     }
@@ -250,7 +252,6 @@ function startTimer(timer_id, button){
             timer_running = false;
             var btn_control = document.getElementById("btn-control");
             btn_control.innerHTML = '<i class="fa fa-play" id="btn-control-icon"></i>';
-            btn_control.disabled = true;
             // Inform the user the timer has completed
             alert("The timer has completed.");
             // Reset the time left to -1 (So it if a previously saved time remains it is not used next time)
@@ -269,7 +270,6 @@ function waitStep(timer_id, button) {
     var tmp_icon;
     button.disabled = true;
     timer_running = true;
-    $("#btn-control").disabled = false;
     $("#btn-control-icon").innerHTML = '<i class="fa fa-pause"></i>';
     
     timer_interval = startTimer(timer_id, button);
