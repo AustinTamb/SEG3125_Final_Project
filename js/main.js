@@ -146,8 +146,10 @@ function setSearchResult(keywords, category) {
                 }
                 // break keywords loop and move on to next recipe
             } else {
-                if (meeting_recipes.indexOf(recipes[j]) == -1) meeting_recipes.push(recipes[j]);
-                num_results++;
+                if (meeting_recipes.indexOf(recipes[j]) == -1) {
+                    meeting_recipes.push(recipes[j]);
+                    num_results++;
+                }
             }
         }
     }
