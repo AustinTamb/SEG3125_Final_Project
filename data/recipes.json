@@ -538,10 +538,10 @@
         ],
         "image":"data/img/Food21.JPG"
     },
-    
-        {
+
+    {
         "id": 22,
-        "name":"Ultimte Huge Burger",
+        "name":"Ultimate Hamburger",
         "ingredients":[ 
             {"name":"Ground beef", "amount": "1/5 lbs"}, 
             {"name":"Ground chicken", "amount": "1/5 lbs"}, 
@@ -567,13 +567,13 @@
             {"type": "normal", "instruction":"Add salt, pepper and msg equally to each bowl.", "time":"-1"},
             {"type": "normal", "instruction":"Take each meat sperately and create a burger with each.", "time":"-1"},
             {"type": "timer", "instruction":"Cook each burger for 3 minutes on each side covering the burgers.", "time":"3"},
-            {"type": "timer", "instruction":"Saute onions with the sugar in the frying pan with the oil .", "time":"2"},
+            {"type": "timer", "instruction":"Saute onions with the sugar in the frying pan with the oil for 2 minutes.", "time":"2"},
             {"type": "normal", "instruction":"Dice jalapenos into small pieces.", "time":"-1"},
             {"type": "normal", "instruction":"In a bowl, mix ketchup, mayo, worchestershire sauce, paprika and jalapeno.", "time":"-1"},
             {"type": "normal", "instruction":"Spread sauce mixture on each bun.", "time":"-1"},
             {"type": "normal", "instruction":"Stack each burger with a slice of cheese between each.", "time":"-1"},
             {"type": "normal", "instruction":"Top with lettuce and enjoy.", "time":"-1"}
         ],
-        "image":"data/img/Food9.JPG"
-    },
+        "image":"data/img/landingImage.jpg"
+    }
 ]

@@ -1,7 +1,7 @@
 "use strict";
 // Holds recipes pulled from the jquery
 var recipes = [];
-var JSON_URL = "https://api.myjson.com/bins/zzv3i";
+var JSON_URL = "https://api.myjson.com/bins/zl3je";
 var timer = [];
 var timer_interval;
 var timer_running = false;
@@ -167,7 +167,7 @@ function setSearchResult(keywords, category) {
     // Set the inner DOM of the results to the table
     result_container.innerHTML = '<table class="table table-hover"><thead><tr class="d-flex"><th class="col-9">Name</th><th class="col-3">Duration</th></tr></thead><tbody id="search_results"></tbody></table>';
     // Basic template for the query result table
-    var template = '<tr class="d-flex" onclick="displayInfo({id});"><th class="col-9">{name}</th><th class="col-3 text-center">{duration} minutes</th></tr>';
+    var template = '<tr class="d-flex" onclick="displayInfo({id});" style="cursor: pointer;"><th class="col-9">{name}</th><th class="col-3 text-center">{duration} minutes</th></tr>';
     // reuse the tmp value
     tmp = "";
 
