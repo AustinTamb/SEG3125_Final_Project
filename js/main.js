@@ -335,7 +335,6 @@ function waitStep(timer_id, button) {
 
 function updateVideoIFrame(){
     var iframe = document.getElementById("video_container");
-    video_iframe = iframe.innerHTML;
     iframe.innerHTML = "";
 }
 
