@@ -305,7 +305,7 @@ function waitStep(timer_id, button) {
         else timer[timer_id].time_left = -1;
         // Enable start timer button
         button.disabled = false;
-        document.getElementById("video_container").innerHTML = "";
+        updateVideoIFrame();
     });
 
     $("#timerModal").on("mouseleave", function () {
@@ -313,7 +313,7 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             button.disabled = false;
             timer[timer_id].time_left = -1;
-            document.getElementById("video_container").innerHTML = "";
+            updateVideoIFrame();
         }
     });
 
@@ -328,11 +328,15 @@ function waitStep(timer_id, button) {
         }
         timer_running = !timer_running;
         this.innerHTML = '<i class="' + tmp_icon + '"></i>';
-        document.getElementById("video_container").innerHTML = "";
+        updateVideoIFrame();
     });
 }
 
-
+function updateVideoIFrame(){
+    var iframe = document.getElementById("video_container");
+    video_iframe = iframe.innerHTML;
+    iframe.innerHTML = "";
+}
 
 function replaceFractions(to_parse) {
     // This function just replaces fractions into single characters
