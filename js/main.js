@@ -308,8 +308,9 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             button.disabled = false;
             timer[timer_id].time_left = -1;
-            $("ytp-button").click();
-            console.log(document.getElementsByClassName("ytp-button"));
+            $('.youtube_player_iframe').each(function () {
+                this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+            });
         }
     });
 
