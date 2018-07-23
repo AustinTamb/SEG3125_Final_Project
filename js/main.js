@@ -308,7 +308,8 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             button.disabled = false;
             timer[timer_id].time_left = -1;
-            document.getElementsByTagName("iframe")[0].postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            document.getElementsByTagName("iframe")[0].enabled = false;
+            //document.getElementsByTagName("iframe")[0].stopVideo();//postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         }
     });
 
