@@ -308,7 +308,11 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             button.disabled = false;
             timer[timer_id].time_left = -1;
-            try{document.getElementsByTagName("video")[0].pause();} catch(exception){};
+            try{
+                document.getElementsByTagName("video")[0].pause();
+            } catch(err){
+                console.log(err.message);
+            };
         }
     });
 
