@@ -322,6 +322,7 @@ function waitStep(timer_id, button) {
             else timer[timer_id].time_left = -1;
             button.disabled = false;
             updateVideoIFrame();
+            $("#timerModal").off("mouseleave");
         }
     });
 
