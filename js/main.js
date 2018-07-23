@@ -238,6 +238,7 @@ function generateRecipePage() {
                 alert("Sorry, the video was not found. Make sure the URL ends with '?v=[id]' as the [id] is used to find the video.");
                 return;
             }
+            document.getElementById("video_container").innerHTML = video_iframe;
             document.getElementById("video").src = "https://www.youtube.com/embed/" + id + "?enablejsapi=1";
             video_iframe = document.getElementById("video_container").innerHTML;
         });
@@ -329,7 +330,6 @@ function waitStep(timer_id, button) {
         }
         timer_running = !timer_running;
         this.innerHTML = '<i class="' + tmp_icon + '"></i>';
-        updateVideoIFrame();
     });
 }
 
