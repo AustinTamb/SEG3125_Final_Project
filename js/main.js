@@ -308,6 +308,7 @@ function waitStep(timer_id, button) {
         // Enable start timer button
         button.disabled = false;
         updateVideoIFrame();
+        $("#timerModal").off("mouseleave");
     });
 
     $("#timerModal").on("mouseleave", function () {
@@ -315,7 +316,7 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             // Ask user if they wish to save the remaining time
             var keep_time;
-            if (time_left != 0) keep_time = confirm("You are going to exit the timer, would you like to continue from this time when restarting the timer?");
+            if (time_left != 0) keep_time = confirm("You have quit the timer, would you like to continue from this time when restarting the timer?");
             // If so save it, otherwise reset time_left to -1
             if (keep_time && time_left != 0) timer[timer_id].time_left = time_left;
             else timer[timer_id].time_left = -1;
