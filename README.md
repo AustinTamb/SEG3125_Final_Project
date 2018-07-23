@@ -1,7 +1,7 @@
 # SEG3125_Final_Project
 The website can be accessed by going on https://austintamb.github.io/SEG3125_Final_Project/index.
 
-This is a website made for SEG3125 as a final project. Our idea originally was to have a video overlay the recipe during timed steps, thus the name viewRecipe, however due to the restricted timeframe as well as the difficulties that would occur from doing so, we decided to only implement a timer.
+This is a website made for SEG3125 as a final project.
 
 # Data Stuff
 
@@ -30,7 +30,7 @@ Some minor features that would have been nice to have are:
 * Login system to allow users to save recipes. (As recipes have unique IDs all we would need to store is a list with those ids)
 * Progress bar for the recipe as steps are completed
 * Recipe suggestion
+* Built-in playlist
  
-These features mentionned above were not implemented as they would require too much time and effort for a project that does not require it. 
-
+These features mentionned above were not implemented as they would require too much time and effort to implement while they were also not planned to be implemented. 
 
