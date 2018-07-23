@@ -33,7 +33,7 @@ $(document).ready(function () {
         searchChanged();
     });
 
-    $(".nav-item").on("click", function(){
+    $(".nav-item").on("click", function () {
         $("#navbarSupportedContent").collapse('toggle');
     });
 });
@@ -228,10 +228,19 @@ function generateRecipePage() {
             tmp += '<div class="checkbox"><label for="{ingredientIndex}"><input name="Ingredient" id="{ingredientIndex}" type="checkbox" value=""> {amount} {ingredient}</label></div>'.replace("{ingredient}", ingredients[i].name).replace("{amount}", replaceFractions(ingredients[i].amount)).replace("{ingredientIndex}", tmp_id).replace("{ingredientIndex}", tmp_id);
         }
         ing.innerHTML = tmp + "</div>";
+
+        $("#btn_search_video").on("click", function () {
+            var id = document.getElementById("search_video").value.split("?v=")[1];
+            if (id == undefined) {
+                alert("Sorry, the video was not found. Make sure the URL ends with '?v=[id]' as the [id] is used to find the video.");
+                return;
+            }
+            document.getElementById("video").src = "https://www.youtube.com/embed/" + id;
+        });
     });
 }
 
-function startTimer(timer_id, button){
+function startTimer(timer_id, button) {
     // Turn minute wait time into s (m * 60s/min). Select between previously saved time if it's != -1, otherwise use default
     time_left = timer[timer_id].time_left == -1 ? timer[timer_id].time : timer[timer_id].time_left;
     var minutes = document.getElementById("timer_minutes");
@@ -271,13 +280,15 @@ function waitStep(timer_id, button) {
     button.disabled = true;
     timer_running = true;
     $("#btn-control-icon").innerHTML = '<i class="fa fa-pause"></i>';
-    
+
     timer_interval = startTimer(timer_id, button);
     $("#timerModal").modal();
     // Set interval between running the steps inside the function
-    
+
+
     // Remove all event listeners on the close and exit buttons
     $("#timer_close, #timer_exit, #btn-control").off("click");
+    $("#timerModal").off("mouseleave");
     // Add new event listener onto it
     $("#timer_close, #timer_exit").on("click", function () {
         // Stop timer
@@ -292,7 +303,13 @@ function waitStep(timer_id, button) {
         button.disabled = false;
     });
 
-    $("#btn-control").on("click", function(){
+    $("#timerModal").on("mouseleave", function () {
+        clearInterval(timer_interval);
+        button.disabled = false;
+        timer[timer_id].time_left = -1;
+    });
+
+    $("#btn-control").on("click", function () {
         if (timer_running) {
             clearInterval(timer_interval);
             timer[timer_id].time_left = time_left;

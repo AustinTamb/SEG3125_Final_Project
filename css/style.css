@@ -121,7 +121,7 @@ search_container {
     }
 }
 
-#btn_search {
+#btn_search, #btn_search_video {
     width: 100%;
 }
 
