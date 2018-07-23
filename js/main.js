@@ -304,9 +304,11 @@ function waitStep(timer_id, button) {
     });
 
     $("#timerModal").on("mouseleave", function () {
-        clearInterval(timer_interval);
-        button.disabled = false;
-        timer[timer_id].time_left = -1;
+        if (this.className.indexOf("show") == -1) {
+            clearInterval(timer_interval);
+            button.disabled = false;
+            timer[timer_id].time_left = -1;
+        }
     });
 
     $("#btn-control").on("click", function () {
