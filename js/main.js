@@ -6,6 +6,7 @@ var timer = [];
 var timer_interval;
 var timer_running = false;
 var time_left;
+var video_iframe = '<iframe id="video" width="100%" height="300px" src="https://www.youtube.com/embed/wXQUhX89vtQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"></iframe>';
 
 // Following just adds jquery event listeners on search bar elements.
 $(document).ready(function () {
@@ -229,6 +230,8 @@ function generateRecipePage() {
         }
         ing.innerHTML = tmp + "</div>";
 
+        document.getElementById("video_container").innerHTML = video_iframe;
+
         $("#btn_search_video").on("click", function () {
             var id = document.getElementById("search_video").value.split("?v=")[1];
             if (id == undefined) {
@@ -282,6 +285,7 @@ function waitStep(timer_id, button) {
     $("#btn-control-icon").innerHTML = '<i class="fa fa-pause"></i>';
 
     timer_interval = startTimer(timer_id, button);
+    document.getElementById("video_container").innerHTML = video_iframe;
     $("#timerModal").modal();
     // Set interval between running the steps inside the function
 
@@ -301,6 +305,7 @@ function waitStep(timer_id, button) {
         else timer[timer_id].time_left = -1;
         // Enable start timer button
         button.disabled = false;
+        document.getElementById("video_container").innerHTML = "";
     });
 
     $("#timerModal").on("mouseleave", function () {
@@ -308,17 +313,11 @@ function waitStep(timer_id, button) {
             clearInterval(timer_interval);
             button.disabled = false;
             timer[timer_id].time_left = -1;
-            try{
-                var videos =  document.getElementsByTagName("video");
-                console.log(videos);
-                videos[0].pause();
-            } catch(err){
-                console.log(err.message);
-            };
+            document.getElementById("video_container").innerHTML = "";
         }
     });
 
-    $("#btn-control").on("click", function () {
+    $("#btn-control").on("click", function() {
         if (timer_running) {
             clearInterval(timer_interval);
             timer[timer_id].time_left = time_left;
@@ -329,6 +328,7 @@ function waitStep(timer_id, button) {
         }
         timer_running = !timer_running;
         this.innerHTML = '<i class="' + tmp_icon + '"></i>';
+        document.getElementById("video_container").innerHTML = "";
     });
 }
 
