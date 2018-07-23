@@ -301,7 +301,7 @@ function waitStep(timer_id, button) {
         clearInterval(timer_interval);
         // Ask user if they wish to save the remaining time
         var keep_time;
-        if (time_left != 0) keep_time = confirm("You have closed the timer, would you like to continue from this time when restarting the timer?");
+        if (time_left != 0) keep_time = confirm("You are going to exit the timer, would you like to continue from this time when restarting the timer?");
         // If so save it, otherwise reset time_left to -1
         if (keep_time && time_left != 0) timer[timer_id].time_left = time_left;
         else timer[timer_id].time_left = -1;
@@ -313,13 +313,18 @@ function waitStep(timer_id, button) {
     $("#timerModal").on("mouseleave", function () {
         if (this.className.indexOf("show") == -1) {
             clearInterval(timer_interval);
+            // Ask user if they wish to save the remaining time
+            var keep_time;
+            if (time_left != 0) keep_time = confirm("You are going to exit the timer, would you like to continue from this time when restarting the timer?");
+            // If so save it, otherwise reset time_left to -1
+            if (keep_time && time_left != 0) timer[timer_id].time_left = time_left;
+            else timer[timer_id].time_left = -1;
             button.disabled = false;
-            timer[timer_id].time_left = -1;
             updateVideoIFrame();
         }
     });
 
-    $("#btn-control").on("click", function() {
+    $("#btn-control").on("click", function () {
         if (timer_running) {
             clearInterval(timer_interval);
             timer[timer_id].time_left = time_left;
@@ -333,7 +338,7 @@ function waitStep(timer_id, button) {
     });
 }
 
-function updateVideoIFrame(){
+function updateVideoIFrame() {
     var iframe = document.getElementById("video_container");
     iframe.innerHTML = "";
 }
