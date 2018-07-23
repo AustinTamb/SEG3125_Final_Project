@@ -239,6 +239,7 @@ function generateRecipePage() {
                 return;
             }
             document.getElementById("video").src = "https://www.youtube.com/embed/" + id + "?enablejsapi=1";
+            video_iframe = document.getElementById("video_container").innerHTML;
         });
     });
 }
@@ -285,7 +286,7 @@ function waitStep(timer_id, button) {
     $("#btn-control-icon").innerHTML = '<i class="fa fa-pause"></i>';
 
     timer_interval = startTimer(timer_id, button);
-    document.getElementById("video_container").innerHTML = video_iframe;
+
     $("#timerModal").modal();
     // Set interval between running the steps inside the function
 
