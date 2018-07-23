@@ -309,7 +309,9 @@ function waitStep(timer_id, button) {
             button.disabled = false;
             timer[timer_id].time_left = -1;
             try{
-                document.getElementsByTagName("video")[0].pause();
+                var videos =  document.getElementsByTagName("video");
+                console.log(videos);
+                videos[0].pause();
             } catch(err){
                 console.log(err.message);
             };
