@@ -235,7 +235,7 @@ function generateRecipePage() {
                 alert("Sorry, the video was not found. Make sure the URL ends with '?v=[id]' as the [id] is used to find the video.");
                 return;
             }
-            document.getElementById("video").src = "https://www.youtube.com/embed/" + id;
+            document.getElementById("video").src = "https://www.youtube.com/embed/" + id + "?enablejsapi=1";
         });
     });
 }
